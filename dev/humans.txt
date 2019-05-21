@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technologies
+
+# TEAM
+    Front-end:  Dzebliuk Oleksandr
+
+# TECHNOLOGIES
+
+    HTML5, CSS3, JS
+
+# SITE
+    Last update: Weekly
+    Language: Ukraine
+

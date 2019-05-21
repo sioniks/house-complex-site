@@ -1,0 +1,17 @@
+{
+  "name": "Millenium",
+  "pagers": [
+    {
+      "number": "01",
+      "url": "home.html",
+      "title": "Главная",
+      "child": [
+        {
+          "number": "01.1",
+          "url": "home2.html",
+          "title": "Главная внутрь"
+        }
+      ]
+    }
+  ]
+}

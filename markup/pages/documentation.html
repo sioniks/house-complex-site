@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="slideScreen">
+{{> header/header}}
+<div class="container developer-container">
+    <div class="page__scroll developer_scroll">
+        <div class="scroll_slide video__slide active">
+            <div class="left_half">
+                <div class="first_content">
+                    <h1 class="first_header">Документація </h1>
+                </div>
+            </div>
+            <div class="right_half">
+                <div class="img_block">
+                    <img src="%=static=%img/content/bg/conc_bg.jpg" alt="" class="big_img">
+
+                </div>
+            </div>
+        </div>
+        <div class="scroll_slide documentation__slide ">
+            <div class="left_half">
+                {{> docs/docs-list}}
+            </div>
+            <div class="right_half">
+                {{> docs/docs-info}}
+                {{> docs/certificate}}
+            </div>
+        </div>
+        <div class="scroll_slide documentation__slide slide-rev last_slide">
+            <div class="left_half">
+                {{> docs/docs-info}}
+            </div>
+            <div class="right_half">
+
+                {{> docs/docs-list}}
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+{{> popup/popup}}
+{{> footer/footer}}
+
+</body>
+</html>

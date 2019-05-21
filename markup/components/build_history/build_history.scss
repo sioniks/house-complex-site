@@ -1,0 +1,466 @@
+.history__slide {
+  .left_half {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12vw;
+    @include respond-to(dm) {
+      padding-right: 10vw;
+    }
+
+  }
+  .right_half {
+    display: flex;
+    flex-direction: column;
+    .super-nav {
+      position: absolute;
+      width: 11%;
+      overflow: hidden;
+      bottom: 18.3%;
+      left: -10.7%;
+      height: 18.6vh;
+      @include respond-to(dm) {
+        bottom: 18%;
+        left: -11.9%;
+        width: 12%;
+        height: 18.6vh;
+      }
+      @include respond-to(t) {
+        left: 40%;
+        bottom: 15%;
+        width: 20%;
+        height: 10%;
+        z-index: 10;
+      }
+      @include respond-to(m) {
+        //left: 35%;
+        bottom: 121px;
+        //width: 30%;
+
+        height: 73px;
+        width: 146px;
+        left: calc(50% - 73px);
+      }
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 9.3vh;
+        height: 9.3vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $cl_black;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        transform: rotate(90deg);
+        z-index: 5;
+        @include respond-to(t) {
+          transform: rotate(0);
+          width: 50%;
+          height: 100%;
+          right: unset;
+          left: 0;
+        }
+        @include respond-to(m) {
+
+          width: 73px;
+          height: 73px;
+
+        }
+      }
+      .next {
+        top: 49.9%;
+        @include hover {
+          padding-left: 15px;
+        }
+        @include respond-to(t) {
+          top: 0;
+          left: 49.9%;
+        }
+      }
+      .prev {
+
+        @include hover {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+  .slider_wrapper {
+    height: 80%;
+    display: flex;
+    position: relative;
+    @include respond-to(m) {
+      height: 320px;
+      margin-top: 20px;
+    }
+  }
+  .big-slider {
+    width: 40vw;
+    height: 100%;
+    overflow: hidden;
+    @include respond-to(t) {
+      width: 100vw;
+    }
+    .big_history-slide {
+      width: 42vw;
+      height: 80vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .slide-img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+      }
+      @include respond-to(t) {
+        width: 100%;
+        height: 550px;
+      }
+      @include respond-to(m) {
+        height: 320px;
+      }
+    }
+    .hover-block {
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .min-slider {
+    width: 10vw;
+    height: 100%;
+    z-index: 100;
+    transform: rotateX(180deg);
+    @include respond-to(dm) {
+      width: 12vw;
+    }
+    @include respond-to(t) {
+      display: none;
+    }
+    .min_history-slide {
+      width: 10vw;
+      height: 18.6vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: none;
+      background: $cl_white;
+      z-index: -2;
+      .slide-img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        transform: rotateX(180deg);
+        z-index: -1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $cl_black;
+        z-index: 2;
+        opacity: 0.7;
+      }
+      &.slick-current {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .history_info {
+    height: 20%;
+    position: relative;
+    z-index: 7;
+    background: $cl_yellow;
+    display: flex;
+    @include respond-to(m) {
+      height: 165px;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .date {
+      background: #F2B722;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 10vw;
+      height: 100%;
+      @include respond-to(dm) {
+        width: 12vw;
+      }
+      @include respond-to(t) {
+        width: 20vw;
+      }
+      @include respond-to(m) {
+        width: 100vw;
+        background: $cl_yellow;
+        height: 20%;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 10%;
+      }
+      .date1 {
+        font-size: 46px;
+        font-family: $FontGothamProBold;
+        line-height: 1;
+        @include respond-to(dm) {
+          font-size: 36px;
+        }
+        @include respond-to(m) {
+          font-size: 12px;
+          margin-right: 10px;
+        }
+      }
+      .date2 {
+        font-size: 17px;
+        font-family: $FontGothamProMedium;
+        line-height: 1.8;
+        @include respond-to(dm) {
+          font-size: 14px;
+        }
+        @include respond-to(m) {
+          font-size: 12px;
+        }
+      }
+    }
+    .text {
+      width: 40vw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 17px;
+      line-height: 1.7;
+      font-family: $FontGothamProRegular;
+      @include respond-to(dm) {
+        font-size: 12px;
+      }
+      @include respond-to(t) {
+        width: 80vw;
+      }
+      @include respond-to(m) {
+        width: 100vw;
+        height: 60%;
+      }
+      .text1 {
+        width: 70%;
+        margin-left: 10%;
+      }
+    }
+  }
+  .by_year {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    position: relative;
+    .prev {
+      display: none;
+    }
+    .next {
+      display: none;
+    }
+
+    @include respond-to(t) {
+      height: 55px;
+      & .prev {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        background: url("/static/img/content/elem/left_arrow.svg") no-repeat center;
+        height: 55px;
+        width: 55px;
+
+      }
+      & .next {
+        display: block;
+        position: absolute;
+        left: 265px;
+        z-index: 10;
+        background: url("/static/img/content/elem/right_arrow.svg") no-repeat center;
+        height: 55px;
+        width: 55px;
+        @include respond-to(t) {
+          left: 310px;
+        }
+        @include respond-to(m) {
+          left: 265px;
+        }
+
+      }
+    }
+    @include respond-to(m) {
+      margin-bottom: 0;
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+  .by_month {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include respond-to(t) {
+      height: 55px;
+    }
+
+  }
+
+  .monthListW {
+    position: relative;
+    width: auto;
+    .prev {
+      //display: none;
+    }
+    .next {
+      //display: none;
+    }
+
+    @include respond-to(t) {
+      height: 55px;
+      & .prev {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background: url("/static/img/content/elem/left_arrow.svg") no-repeat center;
+        height: 55px;
+        width: 55px;
+
+      }
+      & .next {
+        display: none;
+        position: absolute;
+        left: 265px;
+        top: 0;
+        z-index: 10;
+        background: url("/static/img/content/elem/right_arrow.svg") no-repeat center;
+        height: 55px;
+        width: 55px;
+        @include respond-to(t) {
+          left: 310px;
+        }
+        @include respond-to(m) {
+          left: 265px;
+        }
+
+      }
+    }
+    @include respond-to(m) {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .year_btn {
+    width: 33%;
+    height: 85px;
+    position: relative;
+    overflow: hidden;
+    color: $cl_grey;
+    background: $cl_light-grey;
+    margin: 0;
+    padding: 0;
+    font-family: $FontGothamProBold;
+    font-size: 17px;
+    line-height: 1.9;
+    border: 1px solid rgba($cl_grey, 0.2);
+    @include respond-to(dm) {
+      height: 58px;
+      font-size: 12px;
+    }
+    @include hover {
+      color: $cl_black;
+    }
+    &.active {
+      background: $cl_yellow;
+      color: $cl_black;
+    }
+    @include respond-to(t) {
+      position: absolute;
+      width: 370px;
+      z-index: 1;
+      transition: all 1s ease;
+      opacity: 0;
+      &.active {
+        background: $cl_light-grey;
+        z-index: 3;
+        opacity: 1;
+      }
+    }
+    @include respond-to(m) {
+      width: 320px;
+    }
+  }
+
+  .month_btm {
+    width: 33%;
+    height: 85px;
+    color: $cl_grey;
+    position: relative;
+    overflow: hidden;
+    background: $cl_white;
+    border: 1px solid rgba($cl_grey, 0.2);
+    margin: 0;
+    padding: 0;
+    font-family: $FontGothamProBold;
+    font-size: 17px;
+    line-height: 1.9;
+    @include respond-to(dm) {
+      height: 58px;
+      font-size: 12px;
+    }
+    @include hover {
+      color: $cl_black;
+    }
+    &.active {
+      color: $cl_black;
+      background: $cl_yellow;
+    }
+    @include respond-to(t) {
+      position: absolute;
+      width: 370px;
+      z-index: 1;
+      transition: all 1s ease;
+      opacity: 0;
+      &.active {
+        background: $cl_light-grey;
+        z-index: 3;
+        opacity: 1;
+      }
+    }
+    @include respond-to(m) {
+      width: 320px;
+    }
+  }
+}
+

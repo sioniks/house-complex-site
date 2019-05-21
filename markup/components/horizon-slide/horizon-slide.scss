@@ -1,0 +1,376 @@
+.horizont__slide {
+  .left_half {
+    overflow: visible !important;
+    z-index: 2;
+    @include fl-col;
+    @include respond-to(t) {
+      justify-content: flex-end;
+    }
+    .screen_header {
+      margin-bottom: 50px;
+      @include respond-to(dm) {
+        margin-bottom: 30px;
+      }
+      @include respond-to(t) {
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 80px;
+      }
+      @include respond-to(m) {
+        width: 90%;
+        margin: 80px 5% 0;
+      }
+
+    }
+  }
+
+  .fade-left {
+    animation: come-left 1.5s;
+  }
+  .fade-bottom {
+    animation: come-bottom 1s;
+  }
+
+  .sliderH-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    .one_slide-h {
+      display: flex;
+      opacity: 0;
+      //visibility: hidden;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transition: all 1.5s ease;
+      z-index: 1;
+      @include respond-to(m) {
+        height: 100%;
+        top: auto;
+        bottom: 0;
+        justify-content: flex-end;
+      }
+      &.active {
+        z-index: 10;
+        opacity: 1;
+      }
+    }
+    .fade {
+      transition: all 1s ease;
+      //transform: translateY(-120%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+
+    }
+    .white_block {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+      transform: translateX(0%);
+      background-color: $cl_white;
+      transition: all 1s ease;
+      &.show {
+        transform: translateX(100%);
+        //opacity: 1;
+      }
+    }
+    .horizon_right {
+      display: none;
+      @include respond-to(t) {
+        @include fl-row;
+        align-items: center;
+        position: relative;
+        height: 215px;
+        z-index: 10;
+        width: 50%;
+        background: $cl_yellow;
+        padding: 0 90px;
+        .one_slide-textM {
+          display: none;
+          &.active {
+            display: block;
+            animation: up .5s ease;
+          }
+        }
+
+      }
+      @include respond-to(m) {
+        width: 100%;
+        padding: 0 5%;
+      }
+
+    }
+    .prev, .next {
+      display: none;
+    }
+    .next {
+      left: unset;
+      right: 0;
+    }
+
+  }
+}
+
+.horizon {
+  &_slide-content {
+    width: 100%;
+    @include fl-col;
+    height: 420px;
+    position: relative;
+    @include respond-to(dm) {
+      height: 320px;
+    }
+    @include respond-to(t) {
+      width: 100%;
+      height: 250px;
+      flex-direction: row;
+    }
+    @include respond-to(m) {
+      flex-direction: column;
+      height: 370px;
+
+    }
+  }
+  &_left {
+    @include fl-row;
+    position: relative;
+    height: 30%;
+    //width: calc(50% - 192px);
+    width: 100%;
+    padding: 0 0 30px;
+    align-items: center;
+    @include respond-to(dm) {
+      //width: calc(50% - 146px);
+    }
+    @include respond-to(t) {
+      width: 50%;
+      padding-left: 40px;
+      align-items: center;
+      padding-top: 0;
+      height: 100%;
+    }
+    @include respond-to(m) {
+      width: 100%;
+      height: 100px;
+      padding: 10px 20px;
+
+    }
+    .decor_elem {
+      position: absolute;
+      @include bg-svg($tree);
+      display: none;
+      top: 0px;
+      left: 80px;
+      @include respond-to(m) {
+        display: none;
+        left: auto;
+        right: 10px;
+        transform: scale(0.6);
+      }
+    }
+    .count {
+      font-size: 24px;
+      line-height: 1.3;
+      font-family: $FontGothamProBold;
+      color: $cl_yellow;
+      margin-right: 40px;
+      display: inline-block;
+      @include respond-to(dm) {
+        font-size: 20px;
+      }
+      @include respond-to(m) {
+        font-size: 16px;
+        margin-right: 15px;
+      }
+    }
+  }
+  &_right {
+    @include fl-row;
+    align-items: center;
+    position: relative;
+    height: 60%;
+    width: 100%;
+    background: $cl_yellow;
+    padding: 0 90px;
+    @include respond-to(dm) {
+      //width: 45%;
+      padding: 0 50px;
+    }
+    @include respond-to(t) {
+      width: 50%;
+      height: 100%;
+    }
+    @include respond-to(m) {
+      width: 100%;
+      height: 270px;
+      padding: 0 8%;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 96px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $cl_black;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      @include respond-to(dm) {
+        width: 73px;
+        height: 73px;
+      }
+      @include respond-to(t) {
+        top: calc(100% - 36px);
+        left: -73px;
+      }
+      @include respond-to(m) {
+        left: calc(50% - 73px);
+        right: unset;
+      }
+
+    }
+    .prev {
+      right: 96px;
+      @include respond-to(dm) {
+        right: 73px;
+      }
+      @include hover {
+        padding-right: 15px;
+        @include respond-to(m) {
+          padding-right: 0;
+        }
+      }
+    }
+    .next {
+      right: 0px;
+      @include respond-to(dm) {
+        right: 0px;
+      }
+      @include respond-to(t) {
+        left: 0;
+      }
+      @include respond-to(m) {
+        left: 50%;
+      }
+      @include hover {
+        padding-left: 15px;
+        @include respond-to(m) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  &_slide-header {
+    font-size: 24px;
+    line-height: 1.3;
+    height: auto;
+    width: 300px;
+    //overflow: hidden;
+    font-family: $FontGothamProBold;
+    @include respond-to(dm) {
+      font-size: 20px;
+    }
+    @include respond-to(t) {
+      width: 70%;
+      font-size: 16px;
+    }
+    .one_slide-head {
+      display: none;
+      width: 300px;
+      //height: 100px;
+      @include respond-to(dm) {
+        width: 100%;
+        //height: 150px;
+
+      }
+      @include respond-to(t) {
+        height: auto;
+      }
+      &.active {
+        display: block;
+        animation: up 1.7s ease;
+      }
+    }
+  }
+
+  &_slide-text {
+    font-size: 18px;
+    line-height: 33px;
+    font-family: $FontGothamProRegular;
+    padding: 30px 0;
+    height: 100%;
+    overflow: hidden;
+    color: #5E6066;
+    @include respond-to(dm) {
+      padding: 23px 0;
+      font-size: 14px;
+      line-height: 25px;
+    }
+    @include respond-to(m) {
+
+    }
+    .one_slide-text {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 95%;
+      &.active {
+        animation: up 1.5s ease;
+        display: flex;
+
+      }
+    }
+  }
+
+}
+
+@keyframes come-left {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    z-index: 2;
+    transform: translateX(0);
+  }
+}
+
+@keyframes come-left2 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

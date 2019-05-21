@@ -1,0 +1,883 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>default title</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta content="telephone=no" name="format-detection">
+    <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+    <meta name="HandheldFriendly" content="true">
+    
+    
+    <!--[if (gt IE 9)|!(IE)]><!--><link href="/static/css/main.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+    
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="300" />
+        <meta property="twitter:description" content="" />
+        <link rel="image_src" href="" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+    </script>
+    
+</head>
+
+<body>
+    <header class="header">
+      <div class="header_wrap">
+        <a href="/home.html" class="header_logo"></a>
+        <div class="header_menu">
+          <div class="menu_item">
+            <a href="#" class='menu_item-link' >Про ЖК</a>
+            <div class="menu_subitem">
+              <a href="#" class='menu_subitem-link'>Концепція</a>
+              <a href="#" class='menu_subitem-link'>Умови придбання</a>
+            </div>
+          </div>
+          <div class="menu_item">
+            <a href="#" class='menu_item-link' >Планування</a>
+            <div class="menu_subitem">
+              <a href="#" class='menu_subitem-link'>Комерційні</a>
+              <a href="#" class='menu_subitem-link'>Житлові</a>
+            </div>
+          </div>
+          <div class="menu_item">
+            <a href="#" class='menu_item-link' >Забудовник</a>
+          </div>
+          <div class="menu_item">
+            <a href="#" class='menu_item-link' >Документація</a>
+          </div>
+          <div class="menu_item">
+            <a href="#" class='menu_item-link' >Контакти</a>
+          </div>
+        </div>
+        <div class="menu_subitem-mob">
+          <a class='back_link'>назад</a>
+          <a href="#" class='menu_subitem-link'>Концепція</a>
+          <a href="#" class='menu_subitem-link'>Умови придбання</a>
+        </div>
+        <div class="menu_subitem-mob2">
+          <a class='back_link'>назад</a>
+          <a href="#" class='menu_subitem-link'>Комерційні</a>
+          <a href="#" class='menu_subitem-link'>Житлові</a>
+        </div>
+      </div>
+      <button class="header_menu-button">
+          <span class="line line-one"></span>
+          <span class="line line-two"></span>
+      </button>
+    
+    </header>    <div class="container plans-container">
+
+        <div class="filter_max-wrap">
+            <div class="max_filter active">
+                <a href="./genplan.html" class="back_to-plans"><span></span> до генeрального плану</a>
+                <h5 class="screen_header">Вибір планування</h5>
+            
+                <div class="filter_section">
+                    <p class="filter_head-text">Секція:</p>
+                    <div class="filter_grid">
+                        <button class="elem active" data-section="1">
+                            <span>А</span>
+                        </button>
+                        <button class="elem" data-section="2">
+                            <span>Б</span>
+                        </button>
+                        <button class="elem" data-section="3">
+                            <span>В</span>
+                        </button>
+                        <button class="elem" data-section="4">
+                            <span>Г</span>
+                        </button>
+                        <button class="elem" data-section="5">
+                            <span>Д</span>
+                        </button>
+                        <button class="elem" data-section="6">
+                            <span>Е</span>
+                        </button>
+                        <button class="elem" data-section="7">
+                            <span>Ж</span>
+                        </button>
+                        <button class="elem" data-section="8">
+                            <span>З</span>
+                        </button>
+                        <button class="elem" data-section="9">
+                            <span>И</span>
+                        </button>
+                        <button class="elem" data-section="10">
+                            <span>І</span>
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="filter_type">
+                    <p class="filter_head-text">Тип квартири:</p>
+                    <div class="type_button">
+                        <button class="bt first-type active" data-flor="1">
+                            <span class="icon"></span>
+                            <p class="bt_name">Однорівневі</p>
+                        </button>
+                        <button class="bt second-type" data-flor="2">
+                            <span class="icon"></span>
+                            <p class="bt_name">Дворівневі</p>
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="filter_room">
+                    <p class="filter_head-text">Кількість житлових кімнат:</p>
+                    <div class="room_count">
+                        <button class="rm room-1 active" data-room="1">
+                            <span>1</span>
+                        </button>
+                        <button class="rm room-2" data-room="2">
+                            <span>2</span>
+                        </button>
+                        <button class="rm room-3" data-room="3">
+                            <span>3</span>
+                        </button>
+                        <button class="rm room-4" data-room="4">
+                            <span>4</span>
+                        </button>
+                        <button class="rm room-5" data-room="5">
+                            <span>5</span>
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="filter_area">
+                    <p class="filter_head-text">Площа квартири:</p>
+                    <div class="area_slider">
+            
+                        <div id="area_slider"></div>
+                        <span id="lower-value" class="sliderValue"></span>
+                        <span id="upper-value" class="sliderValue"></span>
+                    </div>
+            
+                </div>
+            
+                <div class="clean_button">Очистити фільтр</div>
+            </div>
+            
+            <div class="min_filter">
+                <a href="#" class="back_to-plans"><span></span> до генeрального плану</a>
+                <h5 class="screen_header">Вибір планування</h5>
+            
+                <div class="filter_section">
+                    <p class="filter_head-text">Секція:</p>
+                    <div class="filter_grid">
+                        <button class="elem check active" data-section="1">
+                            <span>А</span>
+                        </button>
+                        <button class="elem check" data-section="2">
+                            <span>Б</span>
+                        </button>
+                        <button class="elem check" data-section="3">
+                            <span>В</span>
+                        </button>
+                        <button class="elem" data-section="4">
+                            <span>Г</span>
+                        </button>
+                        <button class="elem" data-section="5">
+                            <span>Д</span>
+                        </button>
+                        <button class="elem" data-section="6">
+                            <span>Е</span>
+                        </button>
+                        <button class="elem" data-section="7">
+                            <span>Ж</span>
+                        </button>
+                        <button class="elem" data-section="8">
+                            <span>З</span>
+                        </button>
+                        <button class="elem" data-section="9">
+                            <span>И</span>
+                        </button>
+                        <button class="elem" data-section="10">
+                            <span>І</span>
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="filter_type">
+                    <p class="filter_head-text">Тип квартири:</p>
+                    <div class="type_button">
+                        <button class="bt first-type active" data-flor="1">
+                            <span class="icon"></span>
+                            <p class="bt_name">Однорівневі</p>
+                        </button>
+                        <button class="bt second-type" data-flor="2">
+                            <span class="icon"></span>
+                            <p class="bt_name">Дворівневі</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="max_results">
+                <div class="mobile_infoo">
+                    <a href="#" class="back_to-plans"><span></span> до генeрального плану</a>
+                    <h5 class="screen_header">Вибір <br>планування</h5>
+                </div>
+                <div class="change_filter">
+                    <div class="btn_p params-grid active">
+                        <div class="icon_params"></div>
+                        <span>За параметрами</span>
+                    </div>
+                    <div class="btn_p params-plan">
+                        <div class="icon_plan"></div>
+                        <span>На плані</span>
+                    </div>
+                    <div class="open_filter">
+                        <span></span>
+                    </div>
+                </div>
+            
+            
+                <div class="apr_grid active" id="apr_grid">
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="apr__link">
+                        <div class="apr_card">
+                            <div class="flor-icon"></div>
+                            <div class="apr_name">Однокімнатна <br/> квартира 1-А</div>
+                            <div class="card_info">
+                                <div class="param_section">
+                                    <div class="title">Секція:</div>
+                                    <div class="params">Г</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Поверх:</div>
+                                    <div class="params">2 - 9</div>
+                                </div>
+                                <div class="param_section">
+                                    <div class="title">Площа:</div>
+                                    <div class="params">40,92 м <sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="apr_img">
+                                <div class="hover_svg"></div>
+                                <img src="/static/img/content/apr/apr_1a.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            
+                <div class="apr_plan">
+                    
+                    <div class="plan_preview">
+                        <img id="mini-plan" class="mini-plan" src="/static/img/content/mini-plan/1.svg" alt="">
+                        <img class="compass" src="/static/img/content/mini-plan/compas.png" alt="">
+                    </div>
+                    
+                    <div class="plans-slider">
+                    
+                    
+                        <!--<div class="swiper-wrapper">-->
+                        <div class="one_section " data-section="1">
+                            <img src="/static/img/content/section/sec_a.svg" alt="" class="plan_img">
+                            <div class="hover_svg k1" data-key="k1" ></div>
+                            <div class="hover_svg k2" data-key="k2" ></div>
+                            <div class="hover_svg k3" data-key="k3" ></div>
+                            <div class="hover_svg k4" data-key="k4" ></div>
+                            <div class="hover_svg k5" data-key="k5" ></div>
+                            <div class="hover_svg k6" data-key="k6" ></div>
+                            <div class="hover_svg k7" data-key="k7" ></div>
+                            <div class="hover_svg k8" data-key="k8" ></div>
+                    
+                            <svg class="plan_color" id="sectionA" data-section="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680.56 339.44">
+                                <a data-key="k1" href="./plans/view/111">
+                                    <path data-key="k1" d="M11,189H39.39V142.64H11Zm57.12,88V191.2H8.55V277ZM101,172H68.07v17H41.55V142.64H101ZM63.27,57.44H40.83V66.8H68.07v66.6H11V66.8h2.4V57.44H8.55V33.68H63.27Z" transform="translate(1)" style="fill: #fea304"/>
+                                </a>
+                                <a href="./plans/view/111">
+                                    <path data-key="k2" d="M669.75,276.42v-85.8h-59.4v85.8Zm-32.88-88H610.35v-17H577.47V142.14h59.4Zm2.16,0h26V142.14H639ZM668.55,33.18h1.2V56.94h-4.68v76H610.35V66.3h27.24V56.94H615.15V33.18Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/111">
+                                    <path data-key="k3" d="M547.35,29.58H524.07v9.24h23.28v49.8H482.79V38.82h4.8V29.58h-7.2V5.7h67Zm2.16,9.24h56.28V132.9h-49V110.34h-7.32Zm-66.72,52h31.08V132.9H482.79Zm64.56,0V112.5h7.32v20.4H516V90.78Z" transform="translate(1)" style="fill: #fff1bc"/>
+                                </a>
+                                <a href="./plans/view/111">
+                                    <path data-key="k4" d="M440,132.9H471V90.78H440ZM473.43,5.7V29.58h-7.08v9.24H471v49.8H420.39V38.82h9.36V29.58H406.47V5.7ZM402,132.9H357.87V38.82h60.36v49.8L402,106Zm35.76-42.12V132.9H404.31V107l16.08-16.2Z" transform="translate(1)" style="fill: #fea304"/>
+                                </a>
+                                <a href="./plans/view/111">
+                                    <path data-key="k5" d="M240.51,90.78h33.84L290.43,107v25.9H240.51Zm36-52h76.8V132.9h-60.6V106l-16.2-16.2ZM207.13,132.9h31.1V90.78h-31.1ZM270.51,5.7h1.2V29.58H248.55v9.24h25.8v49.8h-67.2V38.82H212V29.58h-7.2V5.7Z" transform="translate(1)" style="fill: #ffe986"/>
+                                </a>
+                                <a href="./plans/view/112">
+                                    <path data-key="k6" d="M162.15,132.9H123.63V112.5H131V90.78h31.2Zm33.36,0H164.43V90.78h31.08ZM132.15,5.7h65.76V29.58h-7.2v9.24h4.8v49.8H131V38.82h23.16V29.58H131V5.7Zm-3.36,33.12v71.52h-7.32V132.9h-49V38.82Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k7" d="M510.87,205.62h30.84v70.8h-5.64v9.36h5.64v23.76H492V285.78h7.44v-9.36h-10V227.58h-.6ZM419.79,176h41.64v49.44H419.79Zm67.56,100.44H461.07v9.36h26.4v23.76H419.55V285.78h5v-9.36h-4.8V227.58h67.56Zm118.44,0V176H544V276.42ZM488,225.44H463.59V176h78.12v27.48h-31.8Z" transform="translate(1)" style="fill: #eb400d"/>
+                                </a>
+                                <a href="./plans/view/122">
+                                    <path data-key="k8" d="M216.51,225.42h42.23V176H216.51ZM214.71,176v49.44H190.23l-22-22h-31.8V176Zm-80.4,100.44V176H72.51V276.42Zm2.16-70.8h31l22,22h-.72v48.84h-10v9.36h7.56V309.6h-49.8V285.78h5.76v-9.36h-5.76Zm58.68,103.92h-4.32V285.78h26.28v-9.36H191V227.58h67.56v48.84h-4.8v9.36h4.92v23.76Z" transform="translate(1)" style="fill: #fc591b"/>
+                                </a>
+                            </svg>
+                        </div>
+                    
+                        <div class="one_section " data-section="2">
+                            <img src="/static/img/content/section/sec_b.svg" alt="" class="plan_img">
+                    
+                            <div class="hover_svg k1" data-key="k1" ></div>
+                            <div class="hover_svg k2" data-key="k2" ></div>
+                            <div class="hover_svg k3" data-key="k3" ></div>
+                            <div class="hover_svg k4" data-key="k4" ></div>
+                            <div class="hover_svg k5" data-key="k5" ></div>
+                            <div class="hover_svg k6" data-key="k6" ></div>
+                            <div class="hover_svg k7" data-key="k7" ></div>
+                            <div class="hover_svg k8" data-key="k8" ></div>
+                            <div class="hover_svg k9" data-key="k9" ></div>
+                    
+                            <svg class="plan_color" id="sectionB" data-section="b" xmlns="http://www.w3.org/2000/svg" width="682.02" height="309.95" viewBox="0 0 682.02 309.95">
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M43.22,215v59.84H130.1V215Zm86.88-37.3H109.17v35H130.1ZM9.36,52.33v89.4H55V52.33ZM115.27,23.2V44.13h-6.21v8.2h4.1v52.59H56.89V52.33H76.77v-8.2H56.26V23.2Zm-2.1,83.72H83.08v34.5h30.08Zm-56.27,43h1.58v-8.2H56.89v-34.8H81.08v34.81H79.51v8.2h54.8V175.8h-27V213H56.89Zm-1.89,0v62.79H9.36V149.94Zm-41,73H33V223h1.89v32.29H33v17.56H14Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k2" d="M619.31,141.84V98.29h14.51V127h9.68v23H673v25.87H595.12V150h24.19Zm4.63,36V275h49V177.81Zm11.78-52.69V52.44h10.94v-8.2H630.25V23.31H673V44.24h-2.1v8.2H673v89.4H645.4V125.11Zm-18.3-9.89h-33v26.61h33Zm0-1.89h-33V98.27h33Zm-31.13-90h42.07V44.24h-7.47v8.2h12.94v44H584.39v-44h4.21v-8.2h-4.21V23.31Z" transform="translate(1)" style="fill: #fff1bc"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k3" d="M520.45,105h-2.21L501,122.38v19.46H476.6V124.9h-9.36V52.44h53.22Zm-3.37-81.72h59.11v21h-6.31v8.2h4.21v53.32H522.45V52.44H537.6v-8.2H517.08Zm57,83.72H546.64v34.81h27.45Zm-71.2,34.81V123.12L519.08,107h25.66v34.81Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k4" d="M294.9,52.33V102.6l-4.1.11L272.71,120.8v20.93H242.63V52.33Zm1.89,50.38V52.33h11.15v-8.2h-20.5V23.2H343.5V44.13h-3.26v8.2h3v50.38ZM317,104.6h26.29v37.13H317Zm-42.28,16.93,16.93-16.93H315v37.13H274.71Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k5" d="M278,274.88V179.8h34.18v31.66L325,224.19v50.69Zm36.18-64.26V179.8h32.08v43.54H326.88ZM382.3,179.8H348.23v43.54H382.3ZM327.3,304h-2V283.09h19.46v-8.2H326.88V225.34H382.3v49.54h-5.36v8.2h6.31V304Z" transform="translate(1)" style="fill: #ff8019"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k6" d="M523.29,304.12h-2V283.19h6.31V275h-4.21V222.4h44.17V275h-7.68v8.2h19.35v20.93ZM568.2,220.4H551.69V179.91h37V200Zm-18.38-40.49H523.39V220.4h26.42ZM569.46,275V221.87l21.14-21v-21h29.24V275Z" transform="translate(1)" style="fill: #eb400d"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k7" d="M193.2,121.54v20.19H152.92V104.6h23.35Zm-69.63-69.2h4.1v-8.2h-6.21V23.2h59V44.13H160v8.2h15.15v50.38H123.57Zm0,89.4h27.35V104.6H123.57ZM195.2,120.8l-18.09-18.09V52.33h61.42v89.4H195.2Z" transform="translate(1)" style="fill: #ffe986"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k8" d="M444,222.29h21V179.8h48.59v95.08H444Zm-2.21-42.49H463v40.5H420.9V179.8Zm-22.93,0H392.61v40.5H418.9ZM393.45,304h-2V283.09h4.21v-8.2H392.4v-52.6H442v52.59H428v8.2H447.3V304Z" transform="translate(1)" style="fill: #fc591b"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k9" d="M140.51,215v59.84h87.08V215Zm35.34-35.23V213H227.6V179.8Zm53.64,0v95.08H274V179.8ZM173.85,213H140.51V179.8h33.34Zm16,91V283.09h38.7V304Z" transform="translate(1)" style="fill: #fea304"/>
+                                </a>
+                    
+                            </svg>
+                    
+                        </div>
+                    
+                        <div class="one_section " data-section="3">
+                            <img src="/static/img/content/section/sec_v.svg" alt="" class="plan_img">
+                    
+                            <div class="hover_svg k1" data-key="k1" ></div>
+                            <div class="hover_svg k2" data-key="k2" ></div>
+                            <div class="hover_svg k3" data-key="k3" ></div>
+                            <div class="hover_svg k4" data-key="k4" ></div>
+                            <div class="hover_svg k5" data-key="k5" ></div>
+                            <div class="hover_svg k6" data-key="k6" ></div>
+                            <div class="hover_svg k7" data-key="k7" ></div>
+                    
+                            <svg class="plan_color" id="sectionV" data-section="v" xmlns="http://www.w3.org/2000/svg" width="635.58" height="334.06" viewBox="0 0 635.58 334.06">
+                                <a href="./plans/view/111">
+                                  <path data-key="k1" d="M515.54,192.33H495.11v37.8h20.43ZM618.28,295H597.73V276h-2.16V241.15h2.16v-.23h20.55Zm-107-238.1h4.43V48H509V25.34h63.69V48H550.51v8.9H572v56.93l-60.76,0Zm62.78,0v96.5h49.27V56.9Zm-2,59v37.5h-1.7v8.86H572v67.89H517.58V190.29H495.11V162.45l52.45-.08v-8.86h-1.67l0-37.58ZM495,232.19v65h91.65v-65Zm48.7-116.26H511.2v37.58h32.5ZM574,162.25v67.89h49.27V162.36Z" transform="translate(1)" style="fill: #fff1bc"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M8.08,297V206.41H70.75v90.84H63.82v8.85h6.81v22.48H8.08v-22.7H29V297ZM12.62,56.9h2.27V48.38H8.08v-23h63.8V48H49.75v8.9h20v56.88H12.62ZM42,204.37V115.89H69.71l-.19,37.58H62.91v8.74h66.3v28.06H70.74v14Zm87.07-50.86H71.59l.06-96.61H129.1ZM40,179.62H8.08V115.89H40ZM8.1,181.78v22.59H40V181.78Z" transform="translate(1)" style="fill: #fea304"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M424.83,153.4V131.6l18.28-18.28h25.2V153.4Zm19.53-42.12V56.9h16.12V48H438.57V25.34h63.69V48h-6.93v8.9H500v54.38ZM500,153.05H470.41V113.48H500Zm-57.8-41.77-19.53,19.41V153.4h-29.4V135.12h-10.1V56.9h59Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M333.33,297H282.59V242.4l13.74-13.85V194.49h37Zm-39.05-69.25-13.74,13.74H259.65v-47h34.63ZM257.5,241.49H222v-47h35.5Zm-35.76,87.07h-2v-22.7h6.81V297H222V243.53h58.58V297h-19.3v8.85h20.89v22.7Z" transform="translate(1)" style="fill: #fc591b"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M133.53,56.9h59.15v54.38l-19.53,19.41V153.4H133.53Zm41.78,96.5V131.6l18.28-18.28h25.2V153.4Zm74.25-40.07H220.94V153.4h28.61ZM189,48V25.34h60.51V48h-3.63v8.9h3.41v54.38H194.72V56.9h16.46V48Z" transform="translate(1)" style="fill: #ffe986"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M78.92,194.6l52.45-.11v45.75h22.71V297l-75.15.23Zm54.61-.11V238.2h45.52V194.49Zm48.13.11h29.18v43.6H181.66Zm-29.06,134h-2V305.9h21V297H156.23V240.24h54.61V297h-4.43v8.85h4.43v22.7Z" transform="translate(1)" style="fill: #ff8019"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path data-key="k1" d="M337.65,194.49V297h48V194.49Zm50.06,0v35.87h55.85V194.49Zm96.14.11H445.72v35.76h38.13ZM428.47,306.09h-4.58V297H484V232.4H387.71V297h4.88v9.08h-5.83v2h1.17v20.43h40.53Z" transform="translate(1)" style="fill: #eb400d"/>
+                                </a>
+                            </svg>
+                    
+                        </div>
+                    
+                        <div class="one_section " data-section="4">
+                            <img src="/static/img/content/section/sec_g.svg" alt="" class="plan_img">
+                    
+                            <div class="hover_svg k1" data-key="k1" ></div>
+                            <div class="hover_svg k2" data-key="k2" ></div>
+                            <div class="hover_svg k3" data-key="k3" ></div>
+                            <div class="hover_svg k4" data-key="k4" ></div>
+                            <div class="hover_svg k5" data-key="k5" ></div>
+                            <div class="hover_svg k6" data-key="k6" ></div>
+                            <div class="hover_svg k7" data-key="k7" ></div>
+                            <div class="hover_svg k8" data-key="k8" ></div>
+                    
+                            <svg class="plan_color" id="sectionG" data-section="g" xmlns="http://www.w3.org/2000/svg" width="680.04" height="343.23" viewBox="0 0 680.04 343.23">
+                    
+                                <a href="./plans/view/121">
+                                    <path d="M607.45,248.73v-66.6h61.92v99.72H614.65V248.73Zm-2.16-37v64.44H549V225l13.44-13.2Zm0-29.64v27.48h-43.8l-14.64,14.64h-31.2V182.13ZM482.17,309.21V285.45h4.92v-9.24h-4.8v-49.8h64.56v49.8H523.69v9.24h23.16v23.76Zm.12-84.72h31.08V182.13H482.29Zm122,63.24v21.48h-46V287.73h12.12v-2.28h27.36v2.28Z" transform="translate(1)" style="fill: #eb400d"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M206.65,224.25h31.2V182.13h-31.2Zm85.56-42.12h33.6v19.2h10.56v74.88h-14v9.24h11.88v23.76H280.57V285.45h14.28v-9.24H276V225.09L292.21,209Zm-2.28,0v25.92l-16.08,16.2H240V182.13Zm-16.08,94.08H248v9.24h23.28v23.76h-67V285.45h7.08v-9.24h-4.68v-49.8h67.08Z" transform="translate(1)" style="fill: #ff8019"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M133.81,139.05V38.61H72V139.05Zm2.28-100.44h5.64V29.25h-5.64V5.49h54.12V29.25H178.33v9.36h10V87.45h.6l-22,22H136.09Zm0,100.44V111.57h31.8l22-22h24.36V139Zm80.28,0H258V89.61H216.37Zm44-133.8v24h-7.2v9.36H258V87.45H190.45V38.61h26.28V29.25h-22v-24Z" transform="translate(1)" style="fill: #ffe986"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M376.52,139.05h31.12V96.93H376.52ZM269.77,38.61h12.6V29.25h-12.6V5.49h67.92V29.25h-9.6v9.36h9.48V94.77H324.25v44.28H269.77ZM374.29,139.05H326.41V96.93h47.88ZM407.65,38.61V94.77H339.73V38.61h26.76V29.25H342.37V5.49h65.28V29.25h-4.56v9.36Z" transform="translate(1)" style="fill: #fea304"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M452.65,139.05V96.93H487l15.6,15.6v26.52Zm88.68,0h-36.6V111.57L487,93.81V38.61h12.12V29.25H489.4V5.49h52V29.25h-5.76v9.36h5.76Zm-122,0h31.08V96.93H419.29Zm61-133.56h4.44V29.25H460.69v9.36h24.12V94.77H419.29V38.61h4.8V29.25h-7.2V5.49Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M669.37,38.61V72.93h-4.8v51.48l-26-.36V113.37H609.85V38.61ZM638.53,172.89h26V126.57h-26Zm-61.56,0V141.21h32.88V114.93h26.52v58ZM550.57,47.25V23.37h49.92V56.49h7.2v82.56h-61.8V56.49h26.64V47.25Z" transform="translate(1)" style="fill: #fff1bc"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M72,182.13h49v22.56h7.32v71.52H72ZM195.25,309.21h-64.8V285.45h23.28v-9.24H130.45v-49.8H195v49.8h-4.8v9.24h7.2v23.76Zm-31.32-84.48h31v-42.6h-31Zm-40.8-42.6h38.64v42.12H130.45V202.41h-7.32Z" transform="translate(1)" style="fill: #fea304"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M67.45,124.41V38.61H8v85.8Zm0,2.16v17h32.88v29.28H40.93V126.57ZM12.73,182.13H67.45v66.6H40.21v9.36H62.65v23.76H8V258.09h4.68Zm-.12-9.24H38.77V126.57H12.61Z" transform="translate(1)" style="fill: #ffd100"/>
+                                </a>
+                    
+                            </svg>
+                    
+                    
+                        </div>
+                    
+                        <div class="one_section " data-section="5">
+                            <img src="/static/img/content/section/sec_d.svg" alt="" class="plan_img">
+                    
+                            <div class="hover_svg k1" data-key="k1" ></div>
+                            <div class="hover_svg k2" data-key="k2" ></div>
+                            <div class="hover_svg k3" data-key="k3" ></div>
+                            <div class="hover_svg k4" data-key="k4" ></div>
+                            <div class="hover_svg k5" data-key="k5" ></div>
+                            <div class="hover_svg k6" data-key="k6" ></div>
+                            <div class="hover_svg k7" data-key="k7" ></div>
+                            <div class="hover_svg k8" data-key="k8" ></div>
+                    
+                            <svg class="plan_color" id="sectionD" data-section="d" xmlns="http://www.w3.org/2000/svg" width="696.33" height="333.8" viewBox="0 0 696.33 333.8">
+                                <a href="./plans/view/121">
+                                    <path d="M687.54,165.43H654.91v18.19h32.64ZM654.8,185.59l28,.14v35.55h-28Zm-37.06-20.2h35.07l-.1,55.82h-35ZM559.1,198.3h56.65l-.1,25h13.52v72.26l-70.07.12ZM687.54,33l-.2,22.73H664.71v8.83h22.74V156.2H624.68V64.86h4.44V55.75h-6.71V33Zm-56,190.33h56v72.26h-7v9.31h7l.13,23H622.51V304.83H645v-9.09l-13.52-.12Z" style="fill: #fff1bc"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M393.25,230h35.67l.11,16.16H393.36Zm161.32,65.58H504.92V224.75H479.7V198.18h74.93ZM428.93,198.17H393.26V228h35.95Zm27.61,48.14H431.12V198.15h46.62v26.72Zm46.39,49.42h-5.36v9h5.36v23.2H461.79V295.61H452V248.29h5.33l21.21-21.45h24.24Zm-112,32.14V304.7h7v-9.09h-4.66v-47.2h57l-.1,47.2H433.36v9.32h23.78v23Z" style="fill: #eb400d"/>
+                                </a>
+                                <a href="./plans/view/121"></a>
+                                <a href="./plans/view/121">
+                                    <path d="M67.56,198.16v97.66h52.62V198.16Zm104.67,97.46h-4.15v32.3H125.43V304.8h6.65v-9H122.4V227h28.47l21.35,21.35Zm26.37-97.46v48H173l-21.24-21.24H122.4V198.16Zm2.1,0h35.92v48.08H200.7ZM174.21,327.91h-1.7V304.7h24v-9.09H174.33V248.33h62.29v47.28l-4.66.21v8.89h7v23.2Z" style="fill: #ff8019"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M56,109.59H45.39v46.56H9.1V64.79h3v-9.1h-3V32.58H56v23.1H47.72v9.1H56Zm67.21,55.66v28.47H9.1V165.25H47.49V111.69H74.21v53.56ZM9.1,195.82v100h54v-100Zm107.23-84.13h-40v44.46h40Zm-58.11-56V32.58h58.11v23.1h-4.67v9.1h4.67v44.81H58.22V64.79H76.08v-9.1Z" style="fill: #fea304"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M158,115H128v41.26l30,.12Zm37.72,41.38H160V115h28.35l-.17,21.65h7.46Zm45.69-91.76v73.11H231.12v18.65H197.78v-22h-7.33V64.58h18.6V56.1h-8.94V33H239.4V56h-3.76v8.6ZM191,33V55.75H168.27v8.83h20.09v48.28H128V64.58h4.64V56.1H126V33Z" style="fill: #ffd100"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M316.2,295.73V241.19H329V198.3h52.92v97.44h-12.1v9.09h12.12V327.9H316.2V304.83h9.09v-9.09ZM280.54,198.3v40.79h46.39V198.3Zm-2.33,0H248.14v40.79h30.07Zm-30.07,97.44V241.19h66v54.55H288v9.09h23.78V327.9H248.13V304.83h4.43v-9.09Z" style="fill: #fc591b"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M442.91,156.31V130.84l-13.75-18.92V64.84H486.4v91.47Zm-34.84,0,.28-41.4h20.33l12.07,16.63V156.3ZM406.31,115H376.52v41.4h29.79Zm32.86-82V55.75H416.51v8.83l10.49.26.05,48H376.42V64.54h4.52V55.75h-4.86V33Z" style="fill: #ffe986"/>
+                                </a>
+                                <a href="./plans/view/121">
+                                    <path d="M581.3,156.27l-35.25.06v-19.7h7.13v-22H581.3Zm-28.13-43.65V64.86h20V56l-22.44.07V33h65V56.1h-7V65h4.66l-.52,47.67Zm59.72,2H583.45v41.61H612.9ZM490.82,64.87h60V134.3h-7v22h-53Z" style="fill: #ffd100"/>
+                                </a>
+                    
+                            </svg>
+                    
+                    
+                        </div>
+                        <div class="one_section " data-section="6">
+                    
+                    
+                    
+                        </div>
+                        <div class="one_section " data-section="7">
+                    
+                    
+                    
+                        </div>
+                        <div class="one_section " data-section="8">
+                    
+                    
+                    
+                        </div>
+                        <div class="one_section " data-section="9">
+                    
+                    
+                        </div>
+                        <div class="one_section " data-section="10">
+                    
+                    
+                    
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div class="plans-nav">
+                        <a href="" class="btl prev-plan" >
+                            секція <span id="prv"></span>
+                        </a>
+                        <p class="section_name">Секція <span id="cur"></span></p>
+                        <a href="" class="btl next-plan" >
+                            секція <span id="nxt"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!--<script id='cart_tmpl' type="text/x-jquery-tmpl">-->
+                <!--<a href="./plans/view/${id_section}${rooms_count}${id_plan}" class="apr__link">-->
+                    <!--<div class="apr_card">-->
+                        <!--<div class="flor-icon">-->
+                            <!--<img src="/static/img/content/elem/flor${level}-1.svg" alt="">-->
+                        <!--</div>-->
+                        <!--<div class="apr_name">${name}</div>-->
+                        <!--<div class="card_info">-->
+                            <!--<div class="param_section">-->
+                                <!--<div class="title">Секція:</div>-->
+                                <!--<div class="params">Г</div>-->
+                            <!--</div>-->
+                            <!--<div class="param_section">-->
+                                <!--<div class="title">Поверх:</div>-->
+                                <!--<div class="params">${floors}</div>-->
+                            <!--</div>-->
+                            <!--<div class="param_section">-->
+                                <!--<div class="title">Площа:</div>-->
+                                <!--<div class="params">${total_area} м <sup>2</sup></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="apr_img">-->
+                            <!--<div class="hover_svg"></div>-->
+                            <!--<img src="/images/${img}" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</script>-->
+            
+        </div>
+    </div>
+    <div class="up_btn">
+        <span></span>
+    </div>
+    <footer class="footer">
+        <div class="logo-part">
+            <div class="logo"></div>
+    
+        </div>
+        <div class="info-part">
+            <div class="info_text">
+                <div class="copy">
+                    <div class="copiright">&#169; 2018 Millennium State. Всі права захищені.</div>
+                    <a class="confident">Політика конфіденційності</a>
+    
+                </div>
+                <!--<div class="footer_cont">-->
+                <!--<a href="#" class="phone">8 (800) 500 50 50</a>-->
+                <!--<a href="#" class="mail">emailaddress@mail.com</a>-->
+                <!--</div>-->
+            </div>
+            <div class="info_link">
+                <div class="social">
+                    <a class="social-elem fb">f</a>
+                    <a class="social-elem in">in</a>
+                </div>
+                <a class="by_facility"></a>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="/static/js/main.js"></script>
+        <script src="/static/js/separate-js/main.js"></script>
+    </footer>
+    
+</body>
+</html>

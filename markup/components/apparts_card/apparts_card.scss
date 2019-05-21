@@ -1,0 +1,140 @@
+.apr_grid {
+  .apr__link {
+    margin-right: 5%;
+    margin-bottom: 50px;
+    &:nth-child(even) {
+      margin-top: 20px;
+      margin-right: 0;
+      @include respond-to(m) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(odd) {
+      margin-top: -20px;
+      @include respond-to(m) {
+        margin-top: 0;
+      }
+    }
+
+  }
+}
+
+.apr_card {
+  width: 25vw;
+  max-width: 500px;
+  height: auto;
+  min-height: 60vh;
+  background: rgba($cl_light-grey, 0.5);
+  //padding: 78px 72px;
+  padding: 5em 5em 2em 5em;
+  position: relative;
+  cursor: url("%=static=%content/cursor/cursor-key.svg"), auto;
+  @include respond-to(dm) {
+    padding: 3em;
+  }
+  @include respond-to(t) {
+    width: 42vw;
+    min-height: 45vh;
+  }
+  @include respond-to(m) {
+    width: 88vw;
+  }
+  .flor-icon {
+    @include bg-svg($flor1-1);
+    position: absolute;
+    top: 5em;
+    right: -15px;
+    @include respond-to(dm) {
+      top: 3em;
+      transform: scale(0.7);
+      right: -20px;
+    }
+  }
+  @include hover {
+    .apr_img .hover_svg {
+      opacity: 1;
+    }
+  }
+  .apr_name {
+    color: $cl_black;
+    font-size: 1em;
+    line-height: 1.7;
+    font-family: $FontGothamProBold;
+    margin-bottom: 3em;
+    @include respond-to(dm) {
+      font-size: 0.8em;
+      margin-bottom: 2em;
+    }
+  }
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .param_section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    line-height: 1.8;
+    font-family: $FontGothamProMedium;
+    color: $cl_black;
+    @include respond-to(dm) {
+      font-size: 0.7em;
+    }
+    .title {
+      color: $cl_grey;
+      width: 70%;
+      @include respond-to(dm) {
+        width: 60%;
+      }
+    }
+    .params {
+      width: 30%;
+      text-align: left;
+      text-transform: uppercase;
+      @include respond-to(dm) {
+        width: 40%;
+      }
+    }
+  }
+  .apr_img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    //cursor: url("%=static=%content/cursor/key_shadow.svg"), auto;
+    //img {
+    //  width: 100%;
+    //}
+    .img-bg {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 0%;
+      padding-bottom: 100%;
+    }
+    .hover_svg {
+      display: block;
+      @include position(center);
+      width: 8vh;
+      height: 8vh;
+      background: url("%=static=%content/elem/keylook.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 10;
+      cursor: url("%=static=%content/cursor/cursor-key.svg"), auto;
+      opacity: 0;
+      transition: all .5s ease;
+      //pointer-events: none;
+      &.active {
+        opacity: 1;
+      }
+      @include hover {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.3);
+        //cursor: url("%=static=%content/cursor/key_shadow.svg"), auto;
+      }
+    }
+  }
+}

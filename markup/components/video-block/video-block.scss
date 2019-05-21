@@ -1,0 +1,146 @@
+.video_block {
+  position: relative;
+  width: 200%;
+  left: -100%;
+  height: 100%;
+  // padding-top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @include respond-to(t) {
+    width: 100%;
+    left: 0;
+  }
+
+  .video__close {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    right: 0;
+    top: 10em;
+    background: $cl_black;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+    @include respond-to(dm) {
+      width: 4em;
+      height: 4em;
+      top: 4em;
+    }
+    @include respond-to(m) {
+      top: 0;
+      width: 2em;
+      height: 2em;
+    }
+
+    span {
+      @include position(center);
+      width: 1em;
+      height: 2px;
+      background: $cl_yellow;
+      &.top-l {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &.bot-l {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  .video__overslide {
+    height: 85%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include respond-to(t) {
+      height: 85%;
+    }
+
+    &.visible {
+      opacity: 1;
+      width: 50%;
+      height: 100%;
+      @include respond-to(t) {
+        width: 100%;
+      }
+    }
+  }
+  #vid {
+    z-index: 4;
+
+  }
+  .big_img {
+    width: 100%;
+    height: 100%;
+    @include position(center);
+    left: 75%;
+    z-index: -1;
+  }
+}
+
+
+
+.video__slide {
+  #videoPlay {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 40%;
+    right: -200px;
+    transition: all .5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include respond-to(dm) {
+      width: 300px;
+      height: 300px;
+      right: -150px;
+    }
+    @include respond-to(t) {
+      right: auto;
+      left: 30%;
+      top: 110%;
+    }
+    @include respond-to(m) {
+      right: auto;
+      left: 35%;
+      top: 110%;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .right_half {
+    z-index: 1;
+
+    @include respond-to(t) {
+      padding-top: 0;
+      height: 445px;
+    }
+    @include respond-to(m) {
+      height: 180px;
+    }
+    &.full {
+      overflow: unset;
+      background-color: unset;
+    }
+  }
+  .left_half {
+    overflow: visible!important;
+    z-index: 5;
+    //transition: all 0.7s ease;
+    &.full {
+      transform: translateY(0%) translateX(-100%);
+      @include respond-to(t) {
+        transform: translateY(0%) translateX(0%);
+      }
+    }
+  }
+}

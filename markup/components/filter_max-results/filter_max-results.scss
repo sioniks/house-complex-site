@@ -1,0 +1,182 @@
+.max_results {
+  width: 65%;
+  //margin-left: 35%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+  padding-bottom: 65px;
+  padding-left: 80px;
+  @include respond-to(t) {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-top: 110px;
+  }
+  .mobile_infoo {
+    display: none;
+    @include respond-to(t) {
+      padding: 0 25%;
+      display: block;
+    }
+    @include respond-to(m) {
+      padding: 0;
+    }
+    .back_to-plans {
+      color: $cl_grey;
+      font-size: 1em;
+      line-height: 80px;
+      font-family: $FontGothamProBold;
+      height: 50px;
+      text-transform: uppercase;
+      @include respond-to(dm) {
+        font-size: 0.8em;
+      }
+      @include respond-to(m) {
+        font-size: 0.8em;
+      }
+      span {
+        display: inline-block;
+        @include bg-svg($arr_left);
+        margin-right: 10px;
+        @include respond-to(dm) {
+          transform: scale(0.7);
+          top: 2px;
+        }
+      }
+    }
+  }
+  .change_filter {
+    width: 40%;
+    position: relative;
+    display: flex;
+    border-bottom: 2px solid rgba($cl_grey, 0.2);
+    margin-bottom: 40px;
+    @include respond-to(dm) {
+      width: 44%;
+    }
+    @include respond-to(t) {
+      width: 50%;
+      left: 25%;
+      margin-bottom: 50px;
+    }
+    @include respond-to(m) {
+      left: 0;
+      width: 100%;
+    }
+  }
+  .btn_p {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    line-height: 4em;
+    font-family: $FontGothamProBold;
+    color: $cl_grey;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include hover {
+      color: $cl_black;
+    }
+
+    @include respond-to(dm) {
+      font-size: 0.8em;
+    }
+    @include respond-to(t) {
+      font-size: 0.75em;
+      &:first-child {
+        width: 60%;
+      }
+      &:last-child {
+        width: 40%;
+      }
+    }
+    &.active {
+      color: $cl_black;
+      .icon_plan {
+        @include bg-svg($map-icon-y);
+      }
+      .icon_params {
+        @include bg-svg($params-y);
+      }
+    }
+  }
+  .icon_params {
+    @include bg-svg($params);
+    margin-right: 20px;
+    @include respond-to(dm) {
+      margin-right: 10px;
+    }
+    @include respond-to(m) {
+      margin-right: 10px;
+    }
+  }
+  .icon_plan {
+    @include bg-svg($map-icon);
+    margin-right: 20px;
+    @include respond-to(m) {
+      margin-right: 10px;
+    }
+  }
+
+  .apr_plan {
+    position: relative;
+    display: none;
+    width: 85%;
+    height: 65vh;
+    @include respond-to(dm) {
+      height: 62vh;
+    }
+    @include respond-to(t) {
+      width: 90%;
+      left: 5%;
+    }
+    @include respond-to(m) {
+      width: 95%;
+      left: 2.5%;
+      height: 50vh;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .apr_grid {
+    display: none;
+    padding-top: 50px;
+    &.active {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .open_filter {
+    display: none;
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    right: -22vw;
+    bottom: 0;
+    background: $cl_light-grey;
+    cursor: pointer;
+    @include respond-to(t) {
+      display: block;
+      width: 57px;
+      height: 57px;
+      right: -47%;
+      bottom: -1vh;
+    }
+    span {
+      display: block;
+      @include position(center);
+      @include bg-svg($filter);
+    }
+    @include respond-to(m) {
+      right: 0;
+      bottom: auto;
+      top: -6em;
+      width: 3em;
+      height: 3em;
+    }
+  }
+
+}

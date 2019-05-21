@@ -1,0 +1,367 @@
+.home-container .documentation__slide {
+
+  .left_half, .right_half {
+    padding-top: 12% !important;
+
+    @include respond-to(m) {
+      padding-top: 85px !important;
+    }
+  }
+  .left_half {
+    @include respond-to(t) {
+      padding-top: 0px !important;
+    }
+
+  }
+}
+.documentation__slide {
+  .left_half, .right_half {
+    padding-top: 9% !important;
+    @include respond-to(dm) {
+      padding-top: 11% !important;
+    }
+
+  }
+  &.slide-rev {
+    .left_half {
+      background: $cl_white;
+      background-image: none;
+      @include respond-to(m) {
+        height: 768px !important;
+      }
+      .screen_header {
+        color: $cl_black;
+        @include respond-to(t) {
+          width: 100%;
+        }
+        @include respond-to(m) {
+          margin-left: 0;
+        }
+      }
+      .docs_info {
+        padding-left: 0;
+        padding-right: 150px;
+        @include respond-to(dm) {
+          padding-right: 110px;
+        }
+        @include respond-to(t) {
+          padding: 0;
+          margin: 0;
+        }
+        @include respond-to(m) {
+          padding-right: 0;
+          margin-left: 5%;
+          margin-top: 60px;
+        }
+      }
+    }
+    .right_half {
+      background: url("%=Static=%content/home-page/doc_bg.jpg") center no-repeat;
+      background-size: cover;
+      padding-left: 150px;
+      padding-right: 0;
+      @include respond-to(dm) {
+        padding-left: 110px;
+        padding-right: 0px;
+      }
+      @include respond-to(t) {
+        padding-bottom: 90px;
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+      @include respond-to(m) {
+        padding-left: 0px;
+        padding-right: 0;
+        //padding-bottom: 50px;
+      }
+      .screen_header {
+        color: $cl_white;
+        @include respond-to(m) {
+          margin-left: 20px;
+        }
+      }
+      .docs_list-wrap {
+        width: 71%;
+        @include respond-to(dm) {
+          width: 77%;
+        }
+        @include respond-to(t) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .left_half {
+    background: url("%=Static=%content/home-page/doc_bg.jpg") center no-repeat;
+    background-size: cover;
+    @include respond-to(t) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 768px!important;
+      overflow: hidden;
+      padding-top: 0% !important;
+    }
+    @include respond-to(m) {
+      width: 90%;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .screen_header {
+      color: $cl_white;
+      margin-bottom: 80px;
+      @include respond-to(dm) {
+        margin-bottom: 60px;
+      }
+      @include respond-to(t) {
+        margin-left: 0px;
+        margin-bottom: 70px;
+        width: 60%;
+      }
+      @include respond-to(m) {
+        margin-left: 5%;
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+  .right_half {
+    padding-right: 10vw;
+    @include respond-to(t) {
+      //background: url("%=Static=%content/home-page/doc_bg.jpg") center no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 550px;
+      margin: 0 auto;
+      //padding-top: 150px;
+    }
+    @include respond-to(m) {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 80px;
+    }
+  }
+  .docs_info {
+    padding-left: 150px;
+    @include respond-to(dm) {
+      padding-left: 110px;
+    }
+    @include respond-to(t) {
+      padding-left: 0;
+      width: 60%;
+      margin-left: 20%;
+    }
+    @include respond-to(m) {
+      width: 90%;
+      margin-left: 5%;
+    }
+    .screen_header {
+      margin-bottom: 80px;
+      @include respond-to(dm) {
+        margin-bottom: 60px;
+      }
+    }
+    .screen_subheader {
+      margin-bottom: 40px;
+      @include respond-to(dm) {
+        margin-bottom: 29px;
+      }
+    }
+    .screen_text {
+      margin-bottom: 40px;
+      padding-right: 20%;
+      @include respond-to(dm) {
+        margin-bottom: 29px;
+        padding-right: 0;
+      }
+    }
+    .screen_link {
+      text-transform: lowercase;
+      .link_label {
+        color: $cl_yellow;
+      }
+      .link_label_hover {
+        color: $cl_black;
+      }
+    }
+  }
+  .docs_list-wrap {
+    width: 75%;
+    height: 24em;
+    //overflow: hidden;
+    position: relative;
+    @include respond-to(dm) {
+      width: 80%;
+      height: 16em;
+    }
+    @include respond-to(t) {
+      width: 60%;
+    }
+    @include respond-to(m) {
+      width: 100%;
+    }
+  }
+  .docs_list {
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include respond-to(m) {
+      width: 90%;
+      left: 5%;
+    }
+    &-item {
+      width: 100%;
+      height: 6em;
+      display: flex;
+      align-items: center;
+      color: $cl_grey;
+      border-bottom: 0.25px solid rgba($cl_grey, 0.3);
+      @include respond-to(dm) {
+        height: 4em;
+      }
+      @include hover {
+        color: $cl_black;
+        & > .icon {
+          @include bg-svg($docB);
+        }
+        & > .arrow {
+          margin: 0 10px 0 30px;
+          @include bg-svg($doc-arrowB);
+        }
+      }
+    }
+    .icon {
+      display: block;
+      @include bg-svg($doc);
+      vertical-align: middle;
+      margin: 0 20px 0 37px;
+      @include respond-to(dm) {
+        transform: scale(0.7);
+        margin: 0 20px 0 26px;
+      }
+      @include respond-to(m) {
+        margin: 0 14px 0 14px;
+      }
+    }
+    .docs_name {
+      width: 70%;
+      font-size: 23px;
+      font-family: $FontGothamProMedium;
+      @include respond-to(dm) {
+        font-size: 16px;
+      }
+      @include respond-to(m) {
+        font-size: 14px;
+      }
+    }
+    .arrow {
+      display: block;
+      @include bg-svg($doc-arrowG);
+      vertical-align: middle;
+      margin: 0 40px 0 20px;
+      transition: margin .5s ease;
+      @include respond-to(dm) {
+        transform: scale(0.7);
+        margin: 0 26px 0 20px;
+      }
+      @include respond-to(m) {
+        display: none;
+      }
+    }
+  }
+}
+
+.prev-doc, .next-doc {
+  position: absolute;
+  top: 50%;
+  right: -5.5em;
+  width: 5.5em;
+  height: 5.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $cl_yellow;
+  color: $cl_black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  transform: rotate(90deg);
+  @include respond-to(dm) {
+    width: 3.5em;
+    height: 3.5em;
+    right: -3.5em;
+  }
+  @include respond-to(m) {
+    transform: rotate(0deg);
+  }
+  &.hide {
+    display: none;
+  }
+}
+.prev-doc {
+  top: calc(50% - 5.5em);
+  @include hover {
+    padding-right: 15px;
+  }
+  @include respond-to(dm) {
+    top: calc(50.3% - 3.5em);
+  }
+  @include respond-to(m) {
+    top: 100%;
+    right: auto;
+    left: calc(95% - 7em);;
+  }
+}
+
+.next-doc {
+  top: 49.9%;
+  @include hover {
+    padding-left: 15px;
+  }
+  @include respond-to(m) {
+    top: 100%;
+    left: auto;
+    right: 5%;
+  }
+}
+
+
+.certificate__block {
+  height: 120px;
+  margin-left: 150px;
+  margin-top: 50px;
+  @include respond-to(dm) {
+    margin-left: 110px;
+    margin-top: 20px;
+  }
+  @include respond-to(t) {
+    margin-left: 20%;
+  }
+  @include respond-to(m) {
+    margin-left: 0;
+  }
+  .certificate__slide {
+    height: 0;
+    width: 100px;
+    max-width: 10vh;
+    min-width: 10vh;
+    padding-bottom: 10vh;
+    margin: 0 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: auto;
+      height: 100%;
+      @include position(centerX);
+      top: 0;
+
+    }
+    @include respond-to(dm) {
+      margin: 0px 20px;
+    }
+  }
+}

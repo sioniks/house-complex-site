@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="25px" viewBox="0 0 30 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.1">
+        <g id="MS-Concept-(1920)" transform="translate(-205.000000, -7155.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group-25" transform="translate(193.000000, 6477.000000)">
+                <g id="foot">
+                    <g id="block-5">
+                        <g id="button" transform="translate(12.000000, 569.000000)">
+                            <g id="graduate-cap" transform="translate(0.000000, 109.000000)">
+                                <path d="M5.45454545,13.9090909 L5.45454545,19.3636364 L15,24.5454545 L24.5454545,19.3636364 L24.5454545,13.9090909 L15,19.0909091 L5.45454545,13.9090909 Z M15,0 L0,8.18181818 L15,16.3636364 L27.2727273,9.68181818 L27.2727273,19.0909091 L30,19.0909091 L30,8.18181818 L15,0 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

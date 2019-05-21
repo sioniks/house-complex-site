@@ -1,0 +1,582 @@
+.plans-slider {
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  background: $cl_white;
+  @include respond-to(t) {
+    top: 10vh;
+  }
+  &.plans-standart {
+    z-index: 10;
+  }
+  &.plans-10 {
+    z-index: 5;
+    &.active {
+      z-index: 15;
+    }
+  }
+}
+
+.plan_preview {
+  position: absolute;
+  height: 8vh;
+  top: -8vh;
+  right: 0;
+  width: 50%;
+  @include respond-to(dm) {
+    top: -11vh;
+  }
+  @include respond-to(t) {
+    top: -3vh;
+  }
+  .mini-plan {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 8vh;
+    width: auto;
+    margin-right: 20px;
+    @include respond-to(dm) {
+      height: 11vh;
+    }
+    @include respond-to(t) {
+      top: 0;
+      height: 8vh;
+      right: 10vw;
+    }
+    @include respond-to(m) {
+      right: 40vw;
+    }
+  }
+  .compass {
+    position: absolute;
+    top: 2vh;
+    right: -10%;
+    width: 6vh;
+    height: auto;
+    @include respond-to(dm) {
+      right: -22%;
+      width: 9vh;
+      top: 2vh;
+    }
+    @include respond-to(t) {
+      right: 0;
+      top: 1vh;
+      width: 8vh;
+    }
+    @include respond-to(m) {
+      right: 25vw;
+    }
+  }
+}
+
+.one_section {
+  display: none!important;
+  //float: left;
+  width: 90%;
+  height: 90%;
+  //margin-right: 10px;
+  position: relative;
+  &.check {
+    display: block!important;
+  }
+  .plan_img {
+    position: relative;
+    //top: 0;
+    //left: 0;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+  }
+  .hover_svg {
+    display: block;
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    background: url("%=static=%content/elem/keylook.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+    cursor: url("%=static=%content/cursor/cursor-key.svg"), auto;
+    opacity: 0;
+    transition: all .5s ease;
+    //pointer-events: none;
+    &.active {
+      opacity: 1;
+    }
+    @include hover {
+      opacity: 1;
+      transform: scale(1.3);
+      //cursor: url("%=static=%content/cursor/cursor.svg"), auto;
+    }
+  }
+  .plan_color {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.65;
+    path {
+      position: relative;
+      z-index: 1;
+      cursor: url("%=static=%content/cursor/cursor-key.svg"), auto;
+    }
+  }
+  .section_name {
+    text-align: center;
+    font-family: $FontGothamProBold;
+    font-size: 20px;
+    margin-top: 100px;
+
+  }
+}
+
+.plans-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  .section_name {
+    text-align: center;
+    font-family: $FontGothamProBold;
+    font-size: 1.9em;
+    @include respond-to(dm) {
+      font-size: 1.25em;
+    }
+    @include respond-to(m) {
+      font-size: 1em;
+    }
+  }
+  .btl {
+    font-family: $FontGothamProBold;
+    color: #AAACB0;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    height: 1.2em;
+    width: 200px;
+    text-transform: uppercase;
+    position: relative;
+    @include respond-to(dm) {
+      font-size: 0.75em;
+    }
+    @include respond-to(m) {
+      font-size: 0.8em;
+      width: 30%;
+    }
+    @include hover {
+      &:after {
+        right: -30px;
+        @include respond-to(m) {
+          right: -15px;
+        }
+      }
+      &:before {
+        left: -30px;
+        @include respond-to(m) {
+          left: -15px;
+        }
+      }
+    }
+
+  }
+  .next-plan {
+    text-align: right;
+    padding-right: 50px;
+    @include respond-to(m) {
+      padding-right: 13px;
+    }
+    &:after {
+      transition: all .5s ease;
+      display: block;
+      position: absolute;
+
+      right: 0px;
+      top: 0px;
+      content: url("%=static=%/content/elem/right_arrow.svg");
+    }
+  }
+  .prev-plan {
+    padding-left: 50px;
+    @include respond-to(m) {
+      padding-left: 13px;
+    }
+    &:before {
+      transition: all .5s ease;
+      display: block;
+      position: absolute;
+
+      left: 0px;
+      top: 0px;
+      content: url("%=static=%/content/elem/left_arrow.svg");
+    }
+  }
+}
+.plans-standart {
+  .one_section[data-section='1'] {
+    .k1 {
+      left: 3%;
+      top: 37%;
+    }
+    .k2 {
+      right: 3%;
+      top: 37%;
+    }
+    .k3 {
+      right: 19%;
+      top: 20%;
+    }
+    .k4 {
+      right: 35%;
+      top: 14%;
+    }
+    .k5 {
+      left: 38%;
+      top: 14%;
+    }
+    .k6 {
+      left: 19%;
+      top: 20%;
+    }
+    .k7 {
+      right: 24%;
+      top: 60%;
+    }
+    .k8 {
+      left: 24%;
+      top: 60%;
+    }
+  }
+
+  .one_section[data-section='2'] {
+    .k1 {
+      left: 5%;
+      top: 40%;
+    }
+    .k2 {
+      right: 3%;
+      top: 37%;
+    }
+    .k3 {
+      right: 19%;
+      top: 20%;
+    }
+    .k4 {
+      right: 55%;
+      top: 26%;
+    }
+    .k5 {
+      left: 46%;
+      top: 66%;
+    }
+    .k6 {
+      left: 80%;
+      top: 67%;
+    }
+    .k7 {
+      right: 71%;
+      top: 25%;
+    }
+    .k8 {
+      left: 64%;
+      top: 67%;
+    }
+    .k9 {
+      left: 27%;
+      top: 67%;
+    }
+  }
+
+  .one_section[data-section='3'] {
+    .k1 {
+      right: 3%;
+      top: 40%;
+    }
+    .k2 {
+      left: 6%;
+      top: 42%;
+    }
+    .k3 {
+      right: 27%;
+      top: 23%;
+    }
+    .k4 {
+      right: 55%;
+      top: 68%;
+    }
+    .k5 {
+      left: 28%;
+      top: 28%;
+    }
+    .k6 {
+      left: 20%;
+      top: 67%;
+    }
+    .k7 {
+      right: 34%;
+      top: 65%;
+    }
+  }
+
+  .one_section[data-section='4'] {
+    .k1 {
+      right: 14%;
+      top: 59%;
+    }
+    .k2 {
+      left: 37%;
+      top: 60%;
+    }
+    .k3 {
+      right: 73%;
+      top: 23%;
+    }
+    .k4 {
+      right: 47%;
+      top: 20%;
+    }
+    .k5 {
+      left: 69%;
+      top: 20%;
+    }
+    .k6 {
+      left: 86%;
+      top: 24%;
+    }
+    .k7 {
+      left: 18%;
+      top: 60%;
+    }
+    .k8 {
+      left: 3%;
+      top: 39%;
+    }
+  }
+
+  .one_section[data-section='5'] {
+    .k1 {
+      right: 7%;
+      top: 64%;
+    }
+    .k2 {
+      left: 63%;
+      top: 65%;
+    }
+    .k3 {
+      left: 21%;
+      top: 65%;
+    }
+    .k4 {
+      left: 5%;
+      top: 28%;
+    }
+    .k5 {
+      left: 24%;
+      top: 26%;
+    }
+    .k6 {
+      left: 42%;
+      top: 65%;
+    }
+    .k7 {
+      left: 59%;
+      top: 27%;
+    }
+    .k8 {
+      left: 77%;
+      top: 27%;
+    }
+  }
+}
+
+.plans-10 {
+  .one_section[data-section='1'] {
+    .k1 {
+      left: 3%;
+      top: 37%;
+    }
+    .k2 {
+      right: 3%;
+      top: 37%;
+    }
+    .k3 {
+      right: 19%;
+      top: 20%;
+    }
+    .k4 {
+      right: 35%;
+      top: 14%;
+    }
+    .k5 {
+      left: 18%;
+      top: 20%;
+    }
+    .k6 {
+      left: 38%;
+      top: 20%;
+    }
+    .k7 {
+      right: 24%;
+      top: 60%;
+    }
+    .k8 {
+      left: 24%;
+      top: 60%;
+    }
+  }
+
+  .one_section[data-section='2'] {
+    .k1 {
+      right: 6%;
+      top: 33%;
+    }
+    .k2 {
+      right: 20%;
+      top: 22%;
+    }
+    .k3 {
+      left: 42%;
+      top: 24%;
+    }
+    .k4 {
+      right: 15%;
+      top: 66%;
+    }
+    .k5 {
+      left: 63%;
+      top: 66%;
+    }
+    .k6 {
+      left: 47%;
+      top: 67%;
+    }
+    .k7 {
+      right: 71%;
+      top: 25%;
+    }
+    .k8 {
+      left: 9%;
+      top: 67%;
+    }
+    .k9 {
+      left: 8%;
+      top: 27%;
+    }
+    .k10 {
+      left: 28%;
+      top: 67%;
+    }
+  }
+
+  .one_section[data-section='3'] {
+    .k1 {
+      left: 6%;
+      top: 35%;
+    }
+    .k2 {
+      left: 67%;
+      top: 22%;
+    }
+    .k3 {
+      left: 27%;
+      top: 23%;
+    }
+    .k4 {
+      right: 55%;
+      top: 68%;
+    }
+    .k5 {
+      left: 64%;
+      top: 66%;
+    }
+    .k6 {
+      left: 20%;
+      top: 67%;
+    }
+    .k7 {
+      right: 12%;
+      top: 67%;
+    }
+    .k8 {
+      right: 9%;
+      top: 27%;
+    }
+  }
+
+  .one_section[data-section='4'] {
+    .k1 {
+      right: 14%;
+      top: 59%;
+    }
+    .k2 {
+      left: 36%;
+      top: 60%;
+    }
+    .k3 {
+      right: 73%;
+      top: 23%;
+    }
+    .k4 {
+      right: 27%;
+      top: 20%;
+    }
+    .k5 {
+      right: 9%;
+      top: 27%;
+    }
+    .k6 {
+      left: 46%;
+      top: 20%;
+    }
+    .k7 {
+      left: 18%;
+      top: 60%;
+    }
+    .k8 {
+      left: 3%;
+      top: 39%;
+    }
+  }
+
+  .one_section[data-section='5'] {
+    .k1 {
+      left: 7%;
+      top: 24%;
+    }
+    .k2 {
+      left: 63%;
+      top: 65%;
+    }
+    .k3 {
+      right: 7%;
+      top: 65%;
+    }
+    .k4 {
+      left: 23%;
+      top: 23%;
+    }
+    .k5 {
+      left: 24%;
+      top: 66%;
+    }
+    .k6 {
+      left: 59%;
+      top: 23%;
+    }
+    .k7 {
+      left: 42%;
+      top: 66%;
+    }
+    .k8 {
+      left: 77%;
+      top: 27%;
+    }
+  }
+}

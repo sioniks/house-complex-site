@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="28px" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>cursor-key@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MS-Plans-(1920)-General-plan" transform="translate(-977.000000, -792.000000)" stroke="#2A2C30" stroke-width="4">
+            <g id="cursor-key" transform="translate(977.000000, 793.000000)">
+                <path d="M11.5,15.5 L25.5,0.5" id="Line-3"></path>
+                <path d="M27,10 L21,4" id="Line-3-Copy"></path>
+                <rect id="Rectangle" fill="#FECF0B" x="2" y="11" width="14" height="14" rx="7"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

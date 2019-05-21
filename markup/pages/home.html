@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+{{> header/header}}
+<div class="container home-container">
+  <div class="page__scroll home_scroll">
+    <div class="scroll_slide video__slide active">
+      <div class="left_half">
+        <div class="first_content">
+          <h1 class="first_header">Місто <br>
+            під сонцем</h1>
+          <div class="first_subheader">
+            Простір для безпечного
+            <br> та комфортного життя
+          </div>
+        </div>
+      </div>
+      <div class="right_half">
+        {{> video-block/video-block}}
+      </div>
+    </div>
+    <div class="scroll_slide ">
+      <div class="left_half">
+        {{> screen_slides/home-second}}
+      </div>
+      <div class="right_half">
+        {{> vertical-slide/vertical-slide}}
+        <div class="bottom-min_block"></div>
+      </div>
+    </div>
+    <div class="scroll_slide genplan__slide ">
+      <div class="left_half">
+        {{> plan-block/genplan_info}}
+      </div>
+      <div class="right_half">
+        {{> plan-block/plan-block}}
+      </div>
+    </div>
+    <div class="scroll_slide horizont__slide ">
+      <div class="left_half">
+        {{> horizon-slide/horizon_left}}
+      </div>
+      <div class="right_half">
+        {{> horizon-slide/horizon-slide}}
+      </div>
+    </div>
+    <div class="scroll_slide last_slide documentation__slide">
+      <div class="left_half">
+        {{> docs/docs-list}}
+      </div>
+      <div class="right_half">
+        {{> docs/docs-info}}
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+{{> footer/footer}} 
+</body>
+</html>

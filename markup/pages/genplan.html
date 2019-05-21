@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+{{> header/header}}
+<div class="container genplan-container">
+    <div class="scroll_slide genplan__slide">
+        <div class="left_half">
+            {{> plan-block/genplan_info}}
+        </div>
+        <div class="right_half">
+            {{> plan-block/plan-block}}
+        </div>
+    </div>
+
+
+</div>
+{{> footer/footer}}
+</body>
+</html>

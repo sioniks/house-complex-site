@@ -1,0 +1,539 @@
+.contacts-container {
+  
+  .first_content {
+    @include respond-to(t) {
+      width: 60%;
+    }
+  }
+  .scroll_slide {
+    position: absolute;
+    background: transparent;
+    height: 100vh;
+    visibility: visible;
+    transition: all .4s .5s linear;
+    &.active {
+      top: 0;
+    }
+    .left_half {
+      background: $cl_white;
+      transform: translateY(0);
+      transition: all .4s .5s linear;
+      @include respond-to(t) {
+        height: auto;
+        transform: none !important;
+      }
+    }
+    @include respond-to(t) {
+      position: relative;
+      top: 0 !important;
+      left: 0 !important;
+      height: auto;
+      transform: none !important;
+    }
+  }
+  .page__scroll {
+    height: 100vh;
+    overflow: hidden;
+    @include respond-to(t) {
+      height: auto;
+    }
+  }
+  // .contact1__slide {
+  //   top: -70%;
+  //   &.active {
+  //     visibility: visible;
+  //     top: 0;
+  //     z-index: 10;
+  //   }
+  //   .first_header {
+  //     font-size: 72px;
+  //     @include respond-to(dm) {
+  //       font-size: 48px;
+  //     }
+  //     @include respond-to(m) {
+  //       font-size: 36px;
+  //     }
+  //   }
+  //   .left_half {
+  //     background: $cl_yellow;
+  //     transition: all 2s linear;
+  //     @include respond-to(t) {
+  //       padding-top: 180px;
+  //     }
+  //     @include respond-to(m) {
+  //       padding-top: 120px;
+  //       padding-bottom: 60px;
+  //     }
+  //   }
+  // }
+  .contact2__slide, .contact3__slide {
+
+    // top: 100%;
+    // z-index: 4;
+    
+  
+    & .contact_table {
+      //margin-top: 0;
+      //transition: all .4s .5s linear;
+    }
+    &.active {
+      top: 0;
+      z-index: 11;
+
+      .left_half {
+        //justify-content: center;
+        padding-top: calc(9em + 80px);
+        @include respond-to(dm) {
+          padding-top: calc(8em + 40px);
+        }
+
+      }
+      & .contact_table {
+        margin-top: 0;
+
+      }
+    }
+    // &.second-top {
+    //   top: -70% !important;
+    // }
+
+    // &.second-bottom {
+    //   top: calc(100% - 300px);
+    //   z-index: 4;
+    //   @include respond-to(dm) {
+    //     top: calc(100% - 200px);
+    //   }
+    // }
+    .left_half {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      @include respond-to(t) {
+        padding: 90px 0px;
+        width: 60%;
+        margin: auto;
+      }
+      @include respond-to(m) {
+        padding: 90px 0;
+        width: 80%;
+      }
+    }
+    .contact_table {
+      display: flex;
+      flex-wrap: wrap;
+      //margin-top: 300px;
+      @include respond-to(m) {
+        display: block;
+      }
+      .table_block {
+        width: 49%;
+        font-family: $FontGothamProBold;
+        font-size: 1.2em;
+        line-height: 1.7;
+        margin-bottom: 3em;
+        @include respond-to(dm) {
+          font-size: 1em;
+          margin-bottom: 2em;
+        }
+        @include respond-to(m) {
+          width: 100%;
+        }
+      }
+      .table_block-header {
+        text-transform: uppercase;
+        color: $cl_grey;
+      }
+      .table_block-text {
+        a {
+          color: $cl_black;
+          display: block;
+        }
+
+      }
+    }
+    .screen_header {
+      margin-bottom: 1.5em;
+      @include respond-to(dm) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .contact2__slide {
+    // height: 80vh;
+  }
+  .contact3__slide {
+    top: 80%;
+    // z-index: 3;
+    // height: 100vh;
+    &.second-bottom {
+      top: 100%;
+
+      @include respond-to(dm) {
+        top: 100%;
+      }
+    }
+    .left_half {
+      padding: 20px 0;
+      padding-left: 10vw;
+      @include respond-to(t) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .contact4__slide {
+    top: 100%;
+    // z-index: 2;
+    // height: 100%;
+    &.second-bottom {
+      top: 35%;
+    }
+    @include respond-to(t) {
+      padding: 0px;
+    }
+    @include respond-to(m) {
+      padding: 90px 20px 0;
+    }
+    .left_half {
+      transition: all .4s .5s linear;
+      transform: translateY(100%);
+      padding-top: 20em;
+      @include respond-to(dm) {
+        transform: translateY(100%);
+        padding-top: 10em; 
+      }
+      @include respond-to(t) {
+        width: 60%;
+        margin: 90px auto;
+        padding-top: 0;
+        @include respond-to(m) {
+          margin: 0 auto 90px;
+          width: 90%;
+        }
+      }
+    }
+    &.active {
+      // padding-top: 9em !important;
+      z-index: 12;
+      & .left_half {
+        transform: translateY(0%);
+      }
+    }
+    .contact_form-header {
+      font-size: 0.9em;
+    }
+    .form_group__text {
+      height: 8em;
+    }
+    .contact_form {
+      align-items: flex-end;
+      @include respond-to(t) {
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+//------------------------------------------------------
+.contact_form-header {
+  font-family: $FontGothamProBold;
+  font-size: 1.2em;
+  line-height: 2;
+  margin-bottom: 1em;
+  color: $cl_grey;
+  text-transform: uppercase;
+  @include respond-to(dm) {
+    font-size: 1em;
+  }
+}
+
+.contact_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .contact_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 2;
+    @include respond-to(dm) {
+      align-items: flex-start;
+    }
+  }
+  .form_button {
+    position: relative;
+    @include respond-to(m) {
+      width: 100%;
+    }
+  }
+  .form_group {
+    background: #F6F7FA;
+    position: relative;
+    width: 100%;
+    &__text {
+      height: 12em;
+      @include respond-to(dm) {
+        height: 10em;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 0;
+      top: 49%;
+      transition: all .4s linear;
+      background: #000000;
+    }
+    &.active {
+      &:before {
+        height: 100%;
+        top: 0;
+      }
+    }
+    &.has-error {
+
+      span {
+        display: block;
+        font-size: 14px;
+        white-space: nowrap;
+        @include respond-to(t) {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .form_fild {
+    font-size: 1.2em;
+    line-height: 3;
+    padding-left: 2em;
+    font-family: $FontGothamProMedium;
+    position: relative;
+    background: none;
+    //transition: all .5s linear;
+    @include respond-to(dm) {
+      font-size: 1em;
+    }
+    &::placeholder {
+      font-family: $FontGothamProRegular;
+      color: rgba(#000, 0.3);
+    }
+    &.form__name {
+      width: 100%;
+      height: 5em;
+      @include respond-to(dm) {
+        height: 4em;
+      }
+    }
+
+  }
+  .wrap2 {
+    display: flex;
+    width: 100%;
+    position: relative;
+    background: #F6F7FA;
+    .form_group {
+      width: 50%;
+      background: none;
+
+    }
+    .form_fild {
+      width: 100%;
+      height: 5em;
+      background: none;
+      @include respond-to(dm) {
+        height: 4em;
+      }
+    }
+    @include respond-to(m) {
+      display: block;
+      .form_group {
+        width: 100%;}
+    }
+
+  }
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 2em;
+    display: none;
+    font-family: $FontGothamProRegular;
+    color: #F00;
+  }
+  .form__text {
+    height: 100%;
+    width: 100%;
+    background: none;
+    resize: none;
+  }
+
+  .contact__link {
+    position: absolute;
+    display: block;
+    left: 2vw;
+    bottom: 2em;
+    opacity: 0.5;
+    transition: all .5s;
+    z-index: 5;
+
+    @include respond-to(t) {
+      left: auto;
+      right: 2vw;
+      top: -2.5em;
+    }
+    @include respond-to(m) {
+      top: -2.5em;
+    }
+    @include hover {
+      opacity: 1;
+    }
+    &.-fb {
+      @include bg-svg($fb);
+      @include respond-to(t) {
+        right: 10vw;
+      }
+    }
+    &.-tw {
+      @include bg-svg($tw);
+      left: 5vw;
+      @include respond-to(t) {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
+.popup_wrapper-contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+
+  background: rgba($cl_black, 0.6);
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  &.active {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    @include respond-to(m) {
+      overflow: scroll;
+    }
+    .thank_block {
+      transform: none;
+    }
+  }
+  .popup_mask {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 51%;
+    height: 100%;
+  }
+  .close_button {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    right: 0;
+    top: 0;
+    background: $cl_white;
+    z-index: 100;
+    cursor: pointer;
+    @include respond-to(dm) {
+      width: 4em;
+      height: 4em;
+    }
+    @include respond-to(t) {
+      right: 80px;
+      top: 22px;
+    }
+    @include respond-to(m) {
+      height: 40px;
+      width: 40px;
+      right: 28px;
+      top: 21px;
+    }
+    span {
+      @include position(center);
+      width: 1em;
+      height: 2px;
+      background: $cl_grey;
+      &.top-l {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &.bot-l {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+  .thank_block {
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #F6B921;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7vw;
+
+    @include respond-to(t) {
+      width: 100%;
+      padding: 0 15vw;
+    }
+    @include respond-to(m) {
+      padding: 20vh 5vh 10vh 5vh;
+      //height: auto;
+    }
+    .thank__header {
+      font-size: 56px;
+      line-height: 1.4;
+      margin-bottom: 1em;
+      font-family: $FontGothamProBold;
+      @include respond-to(dm) {
+        font-size: 36px;
+      }
+    }
+    .thank__text {
+      font-size: 17px;
+      line-height: 1.4;
+      margin-bottom: 3em;
+      width: 60%;
+      font-family: $FontGothamProMedium;
+      @include respond-to(dm) {
+        font-size: 14px;
+      }
+    }
+    .close_button {
+      top: 20%;
+      @include respond-to(t) {
+        right: 80px;
+        top: 22px;
+      }
+      @include respond-to(m) {
+        height: 40px;
+        width: 40px;
+        right: 28px;
+        top: 21px;
+      }
+    }
+  }
+}
+

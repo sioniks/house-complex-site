@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+{{> header/header}}
+    <div class="container contacts-container">
+        <div id="mapsContact"></div>
+        <div class="page__scroll contact_scroll">
+
+            <div class="scroll_slide contact1__slide ">
+                <div class="left_half">
+                    <div class="first_content">
+                        <h1 class="first_header">Контакти <br>
+                            Millennium State</h1>
+                    </div>
+                </div>
+
+            </div>
+            <div class="scroll_slide contact2__slide ">
+                <div class="left_half">
+                    <div class="screen_header">
+                        Офіс <br>
+                        продажів
+                    </div>
+                    <div class="contact_table">
+                        <div class="table_block">
+                            <div class="table_block-header">Адреса:</div>
+                            <div class="table_block-text">м. Київ <br> бул. ім. Лесі Українки <br>119/17</div>
+                        </div>
+                        <div class="table_block">
+                            <div class="table_block-header">Час роботи:</div>
+                            <div class="table_block-text">Пн-Пт 9:00-20:00 <br> Сб-Вс за попереднім записом</div>
+                        </div>
+                        <div class="table_block">
+                            <div class="table_block-header">Телефон:</div>
+                            <div class="table_block-text">8 (800) 500 50 50</div>
+                        </div>
+                        <div class="table_block">
+                            <div class="table_block-header">Електронна пошта:</div>
+                            <div class="table_block-text">office@millenniumstate.com</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="scroll_slide contact3__slide active last_slide">
+                <div class="left_half contact_block">
+                    <div class="contact_form-header">
+                        Зв'язатись з нами
+                    </div>
+                    <form id="contact_form" class="contact_form">
+                        <div class="form_group required">
+                            <input type="text" name="name" class="form_fild form__name " placeholder="Ваше ім'я">
+                            <span>Введіть ваше ім'я</span>
+                        </div>
+                        <div class="wrap2">
+                            <div class="form_group required">
+                                <input type="tel" name="tel" class="form_fild form__tel " placeholder="Телефону">
+                                <span>Введіть номер телефону</span>
+                            </div>
+                            <div class="form_group required">
+                                <input type="email" name="email" class="form_fild form__email " placeholder="E-mail адреса">
+                                <span>Введіть ваш e-mail</span>
+                            </div>
+                        </div>
+                        <div class="form_group form_group__text">
+                            <textarea name="comment" class="form_fild form__text" placeholder="Текст повідомлення"  cols="30" rows="10"></textarea>
+                        </div>
+
+                        <input type="text" name="type" hidden id="form__type">
+                        <input type="text" name="desc" hidden id="appart_info">
+
+                        <button type="submit" class="btn_y form_button" id="">
+                            <span class="btn_label" >Відправити</span>
+                            <span class="btn_label_hover">Відправити</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{{> footer/footer}}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQoQ-cFvvsdyaRHshQczCA6W0NnLvxpU8&amp;callback=initMaps2"></script>
+</body>
+</html>

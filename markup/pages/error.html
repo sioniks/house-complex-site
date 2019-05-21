@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+    {{> header/header}}
+
+    <div class="error__block">
+        <div class="left_half">
+            <img src="/static/img/content/elem/doors.svg" alt="" class="doors_img">
+        </div>
+        <div class="right_half">
+            <div class="screen_header">
+                Помилка <br>
+                <span>404</span>
+            </div>
+
+            <div class="screen_text">
+                Нажаль, такої сторінки не існує.
+                Перевірте, будь-ласка, чи правильно
+                введена адреса.
+            </div>
+            {{> elements/button_y text='Перейти на головну' link='/'}}
+        </div>
+
+    </div>
+
+    {{> footer/footer}}
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "name": "Millenium",
+  "pagers": [
+    {
+      "number": "01",
+      "url": "home.html",
+      "title": "Главная"
+    },
+    {
+      "number": "02",
+      "url": "plans.html",
+      "title": "Сортировка квартир",
+      "child": [
+        {
+          "number": "02.1",
+          "url": "apart.html",
+          "title": "Страница отдельной квартиры"
+        }
+      ]
+    },
+    {
+      "number": "03",
+      "url": "genplan.html",
+      "title": "Генплан"
+    },
+    {
+      "number": "04",
+      "url": "conception.html",
+      "title": "Концепция"
+    },
+    {
+      "number": "05",
+      "url": "contacts.html",
+      "title": "Контакты"
+    },
+    {
+      "number": "06",
+      "url": "developer.html",
+      "title": "Застройщик"
+    }
+  ]
+}

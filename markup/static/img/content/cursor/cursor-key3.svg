@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="56px" viewBox="0 0 57 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>key@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-105.6%" y="-146.3%" width="351.9%" height="351.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.788235294   0 0 0 0 0.266666667  0 0 0 0.01 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-153.1%" y="-153.1%" width="406.2%" height="406.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.788235294   0 0 0 0 0.266666667  0 0 0 0 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Plans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MS-Plans-(1920)-General-plan" transform="translate(-956.000000, -811.000000)" stroke="#2A2C30" stroke-width="4">
+            <g id="key" filter="url(#filter-1)" transform="translate(971.000000, 825.000000)">
+                <g id="Group-6" filter="url(#filter-2)" transform="translate(11.000000, 0.000000)">
+                    <path d="M0.5,15.5 L14.5,0.5" id="Line-3"></path>
+                    <path d="M16,10 L10,4" id="Line-3-Copy"></path>
+                </g>
+                <rect id="Rectangle" fill="#FECF0B" x="2" y="11" width="14" height="14" rx="7"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

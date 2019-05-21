@@ -1,0 +1,112 @@
+/* Your custom fonts here */
+
+/* Example
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/../fonts/Custom-Font.eot');
+    src: url('../fonts/../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/../fonts/Custom-Font.woff') format('woff'),
+         url('../fonts/../fonts/Custom-Font.svg#custom_font') format('svg');
+    font-weight: 400;       // For normal width. It could has another value   
+    font-style: normal;     // Also could has another value
+    }
+
+
+// Var for using custom font
+$CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
+*/
+
+
+
+
+@font-face {
+  font-family: 'Gotham ProBlack';
+  src: url('../fonts/GothamProBlack.eot');
+  src: url('../fonts/GothamProBlack.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProBlack.woff') format('woff'),
+  url('../fonts/GothamProBlack.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Gotham ProBlackItalic';
+  src: url('../fonts/GothamProBlackItalic.eot');
+  src: url('../fonts/GothamProBlackItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProBlackItalic.woff') format('woff'),
+  url('../fonts/GothamProBlackItalic.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Gotham ProBold';
+  src: url('../fonts/GothamProBold.eot');
+  src: url('../fonts/GothamProBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProBold.woff') format('woff'),
+  url('../fonts/GothamProBold.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Gotham ProBoldItalic';
+  src: url('../fonts/GothamProBoldItalic.eot');
+  src: url('../fonts/GothamProBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProBoldItalic.woff') format('woff'),
+  url('../fonts/GothamProBoldItalic.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Gotham ProItalic';
+  src: url('../fonts/GothamProItalic.eot');
+  src: url('../fonts/GothamProItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProItalic.woff') format('woff'),
+  url('../fonts/GothamProItalic.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Gotham ProLight';
+  src: url('../fonts/GothamProLight.eot');
+  src: url('../fonts/GothamProLight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProLight.woff') format('woff'),
+  url('../fonts/GothamProLight.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Gotham ProMedium';
+  src: url('../fonts/GothamProMedium.eot');
+  src: url('../fonts/GothamProMedium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProMedium.woff') format('woff'),
+  url('../fonts/GothamProMedium.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Gotham ProMediumItalic';
+  src: url('../fonts/GothamProMediumItalic.eot');
+  src: url('../fonts/GothamProMediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProMediumItalic.woff') format('woff'),
+  url('../fonts/GothamProMediumItalic.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Gotham ProRegular';
+  src: url('../fonts/GothamProRegular.eot');
+  src: url('../fonts/GothamProRegular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamProRegular.woff') format('woff'),
+  url('../fonts/GothamProRegular.ttf') format('truetype');
+
+}
+
+
+
+$FontGothamProBlack: 'Gotham ProBlack', Helvetica, Arial, sans-serif;
+$FontGothamProBlackItalic: 'Gotham ProBlackItalic', Helvetica, Arial, sans-serif;
+$FontGothamProBold: 'Gotham ProBold', Helvetica, Arial, sans-serif;
+$FontGothamProBoldItalic: 'Gotham ProBoldItalic', Helvetica, Arial, sans-serif;
+$FontGothamProItalic: 'Gotham ProItalic', Helvetica, Arial, sans-serif;
+$FontGothamProLight: 'Gotham ProLight', Helvetica, Arial, sans-serif;
+$FontGothamProMedium: 'Gotham ProMedium', Helvetica, Arial, sans-serif;
+$FontGothamProItalic: 'Gotham ProMediumItalic', Helvetica, Arial, sans-serif;
+$FontGothamProRegular: 'Gotham ProRegular', Helvetica, Arial, sans-serif;
+

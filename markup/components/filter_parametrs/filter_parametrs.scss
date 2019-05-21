@@ -1,0 +1,427 @@
+.filter_max-wrap {
+  display: flex;
+  //justify-content: flex-end;
+  min-height: 95vh;
+  //padding-top: 200px;
+}
+
+.max_filter,
+.min_filter {
+  width: 35%;
+  //height: 100vh;
+  //position: fixed;
+  display: none;
+  flex-direction: column;
+  padding-top: 170px;
+  padding-left: 10vw;
+  background: $cl_light-grey;
+  @include respond-to(dm) {
+    padding-top: 150px;
+  }
+  @include respond-to(t) {
+    //position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    background: #F8F9F9;
+    z-index: 2000;
+    padding: 0;
+    transition: all 0.7s ease;
+    transform: translateX(-110%);
+    //transform: translateX(0%);
+  }
+  @include respond-to(m) {
+    padding-top: 150px;
+    overflow: scroll;
+  }
+  &.opened {
+    transform: translateX(0%);
+  }
+  &.active {
+    display: flex;
+    @include respond-to(t) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .back_to-plans {
+    color: $cl_grey;
+    font-size: 1em;
+    line-height: 80px;
+    //margin-bottom: 30px;
+    font-family: $FontGothamProBold;
+    height: 80px;
+    max-width: 300px;
+    text-transform: uppercase;
+    @include respond-to(dm) {
+      font-size: 0.8em;
+    }
+
+    @include hover {
+      color: $cl_black;
+      span {
+        left: -10px;
+      }
+    }
+    @include respond-to(t) {
+      display: none;
+    }
+    span {
+      transition: all 1s ease;
+      display: inline-block;
+      @include bg-svg($arr_left);
+      position: relative;
+      margin-right: 10px;
+      @include respond-to(dm) {
+        transform: scale(0.7);
+        top: 2px;
+      }
+    }
+  }
+  .screen_header {
+    //font-size: 50px;
+    margin-bottom: 1.2em;
+    padding-right: 30px;
+    @include respond-to(t) {
+      display: none;
+    }
+  }
+  .close_button {
+    display: none;
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    right: 0;
+    top: 5em;
+    background: $cl_white;
+    cursor: pointer;
+    @include respond-to(t) {
+      display: block;
+    }
+    @include respond-to(m) {
+      width: 3em;
+      height: 3em;
+      top: 20px;
+      right: 20px;
+    }
+    span {
+      @include position(center);
+      width: 1em;
+      height: 2px;
+      background: $cl_grey;
+      &.top-l {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &.bot-l {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.min_filter {
+  @include respond-to(m) {
+    padding-top: 0px;
+  }
+}
+
+.filter_section {
+  @include respond-to(t) {
+    width: 40%;
+  }
+  @include respond-to(m) {
+    width: 80%;
+  }
+}
+
+
+.filter_head-text {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: $cl_grey;
+  font-family: $FontGothamProMedium;
+  margin-bottom: 22px;
+  @include respond-to(dm) {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+}
+
+.filter_grid {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba($cl_grey, 0.3);
+  margin-bottom: 60px;
+  @include respond-to(dm) {
+  margin-bottom: 40px;
+  }
+  @include respond-to(t) {
+    width: 100%;
+  }
+  .elem {
+    width: 20%;
+    height: 0;
+    padding-top: calc(20% - 2px);
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    font-family: $FontGothamProBold;
+    border: 1px solid rgba($cl_grey, 0.3);
+    font-size: 1.1em;
+    color: $cl_grey;
+    background: $cl_white;
+    position: relative;
+    overflow: hidden;
+    @include hover {
+      color: $cl_black;
+    }
+    @include respond-to(dm) {
+      font-size: 0.8em;
+    }
+    &.active {
+      color: $cl_yellow;
+      background: $cl_black;
+    }
+    span {
+      @include position(center);
+    }
+
+  }
+}
+
+.type_button {
+  display: flex;
+  width: 80%;
+  @include respond-to(t) {
+    width: 100%;
+  }
+  .bt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 0;
+    padding-top: calc(20% - 2px);
+    font-family: $FontGothamProBold;
+    font-size: 1.1em;
+    border: 1px solid rgba($cl_grey, 0.3);
+    margin-bottom: 60px;
+    color: $cl_grey;
+    background: $cl_white;
+    position: relative;
+    @include hover {
+      color: $cl_black;
+    }
+    @include respond-to(dm) {
+      font-size: 0.8em;
+      margin-bottom: 40px;
+    }
+    &.active {
+      color: $cl_yellow;
+      background: $cl_black;
+    }
+    .icon {
+      @include position(center);
+      left: 20%;
+      @include respond-to(dm) {
+        left: 10%;
+        transform: (scale(0.7) translate(-50%, -80%));
+      }
+    }
+    .bt_name {
+      @include position(center);
+      left: 60%;
+    }
+
+  }
+  .first-type {
+    .icon {
+      @include bg-svg($flor1);
+    }
+
+  }
+  .second-type {
+    .icon {
+      @include bg-svg($flor2);
+    }
+
+  }
+}
+
+.room_count {
+  width: 80%;
+  display: flex;
+  border: 1px solid rgba($cl_grey, 0.3);
+  margin-bottom: 60px;
+  @include respond-to(dm) {
+    margin-bottom: 40px;
+  }
+  @include respond-to(t) {
+    width: 100%;
+  }
+  .rm {
+    width: 20%;
+    height: 0;
+    padding-top: calc(20% - 2px);
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    font-family: $FontGothamProBold;
+    font-size: 1.1em;
+    border: 1px solid rgba($cl_grey, 0.3);
+    color: $cl_grey;
+    background: $cl_white;
+    position: relative;
+    @include hover {
+      color: $cl_black;
+    }
+    @include respond-to(dm) {
+      font-size: 0.8em;
+    }
+    &.active {
+      color: $cl_yellow;
+      background: $cl_black;
+    }
+    &.no-rooms {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+    span {
+      @include position(center);
+    }
+  }
+
+}
+
+.area_slider {
+  width: 77%;
+  padding-left: 2%;
+  margin-bottom: 30px;
+  @include respond-to(t) {
+    width: 100%;
+  }
+  .sliderValue {
+    display: inline-block;
+    //width: 50px;
+    margin-top: 20px;
+    font-family: $FontGothamProBold;
+    color: $cl_grey;
+    font-size: 1.1em;
+    position: relative;
+    display: none;
+    @include respond-to(dm) {
+      font-size: 0.8em;
+    }
+    &#lower-value {
+      float: left;
+      left: -5%;
+    }
+    &#upper-value {
+      float: right;
+      right: -15%;
+    }
+  }
+  .noUi-horizontal {
+    height: 10px;
+    .noUi-handle {
+      width: 25px;
+      height: 25px;
+      top: -9px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .noUi-connect {
+    background: $cl_yellow;
+  }
+  //.noUi-tooltip {
+  //  display: none;
+  //}
+  //.noUi-active .noUi-tooltip {
+  //  display: block;
+  //}
+}
+
+.clean_button {
+  //max-width: 400px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: $cl_grey;
+  font-family: $FontGothamProMedium;
+  margin-bottom: 22px;
+  opacity: 0.7;
+  @include hover {
+    color: $cl_black;
+  }
+  @include respond-to(dm) {
+    font-size: 0.8em;
+  }
+  @include respond-to(t) {
+    width: 40%;
+  }
+  @include respond-to(m) {
+    width: 80%;
+    margin-bottom: 3em;
+  }
+}
+.filter_type {
+  @include respond-to(t) {
+    width: 40%;
+  }
+  @include respond-to(m) {
+    width: 80%;
+  }
+}
+.filter_room {
+  display: block;
+  @include respond-to(t) {
+    width: 40%;
+  }
+  @include respond-to(m) {
+    width: 80%;
+  }
+  &.active {
+    display: none;
+  }
+}
+
+.filter_area {
+  display: block;
+  margin-bottom: 3em;
+  @include respond-to(t) {
+    width: 40%;
+    padding-right: 2%;
+  }
+  @include respond-to(m) {
+    width: 80%;
+    margin-bottom: 0;
+  }
+  &.active {
+    display: none;
+  }
+  .filter_head-text {
+    margin-bottom: 50px;
+  }
+  .noUi-tooltip {
+    border: none;
+    background: none;
+    font-family: $FontGothamProBold;
+    color: $cl_grey;
+    font-size: 1.1em;
+    @include respond-to(dm) {
+      font-size: .9em;
+    }
+    @include respond-to(t) {
+      font-size: .8em;
+    }
+  }
+}
+

@@ -1,0 +1,292 @@
+.popup_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  transition: all 0.5s ease;
+  background: rgba($cl_black, 0.6);
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  &.active {
+    top: 0;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    @include respond-to(m) {
+      overflow: scroll;
+    }
+    .popup_block {
+      transform: none;
+    }
+  }
+  .popup_mask {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 51%;
+    height: 100%;
+  }
+  .popup_block {
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #F6B921;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7vw;
+    @include respond-to(t) {
+      width: 100%;
+      padding: 0 15vw;
+    }
+    @include respond-to(m) {
+      padding: 60px 5vh 10vh 5vh;
+      height: 100%;
+      min-height: 500px;
+    }
+  }
+  .wrap1 {
+    position: relative;
+    @include respond-to(t) {
+      position: unset;
+    }
+
+  }
+  .close_button {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    right: 0;
+    top: 0;
+    background: $cl_white;
+    z-index: 100;
+    cursor: pointer;
+    @include respond-to(dm) {
+      width: 4em;
+      height: 4em;
+    }
+    @include respond-to(t) {
+      right: 80px;
+      top: 22px;
+    }
+    @include respond-to(m) {
+      height: 40px;
+      width: 40px;
+      right: 28px;
+      top: 21px;
+    }
+    span {
+      @include position(center);
+      width: 1em;
+      height: 2px;
+      background: $cl_grey;
+      &.top-l {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &.bot-l {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+  .form_name {
+    font-size: 56px;
+    line-height: 1.4;
+    margin-bottom: 3em;
+    font-family: $FontGothamProBold;
+    @include respond-to(dm) {
+      font-size: 36px;
+    }
+    @include respond-to(m) {
+      margin-bottom: 40px;
+    }
+  }
+  .popup_form {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    @include respond-to(m) {
+      display: block;
+    }
+  }
+  .form_button {
+    position: relative;
+  }
+  .form_group {
+    background: rgba(#fff, 0.5);
+    position: relative;
+    width: 100%;
+    &__text {
+      height: 12em;
+      @include respond-to(dm) {
+        height: 9em;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 0;
+      top: 49%;
+      transition: all .4s ease;
+      background: #000000;
+      z-index: 10;
+    }
+    &.active {
+      &:before {
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+
+  .form_fild {
+    font-size: 1.2em;
+    line-height: 3;
+    padding-left: 2em;
+    font-family: $FontGothamProMedium;
+    position: relative;
+    @include respond-to(dm) {
+      font-size: 1em;
+    }
+    &::placeholder {
+      font-family: $FontGothamProRegular;
+      color: rgba(#000, 0.3);
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      transition: none;
+      border: none;
+      -webkit-box-shadow: 0 0 0 1000px #fbdc90 inset;
+      -webkit-text-fill-color: unset;
+    }
+
+
+
+
+  }
+  .wrap2 {
+    display: flex;
+    width: 100%;
+    position: relative;
+    background: rgba(#fff, 0.5);
+    @include respond-to(m) {
+      flex-direction: column;
+      height: auto;
+    }
+    .form_group {
+      width: 40%;
+      background: none;
+      @include respond-to(dm) {
+        width: 45%;
+      }
+      @include respond-to(m) {
+        width: 100%;
+      }
+      &.has-error {
+        span {
+          display: block;
+        }
+      }
+    }
+    .form_fild {
+      width: 100%;
+      height: 5em;
+      background: none;
+      @include respond-to(dm) {
+        height: 4em;
+      }
+
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 2em;
+      display: none;
+      font-family: $FontGothamProRegular;
+      color: #F00;
+    }
+  }
+  .form__text {
+    height: 100%;
+    width: 100%;
+    background: none;
+    resize: none;
+  }
+  .thank_block {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #F6B921;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7vw;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    &.active {
+      transform: translateX(0%);
+    }
+    @include respond-to(t) {
+      width: 100%;
+      padding: 0 15vw;
+      position: fixed;
+      overflow: hidden;
+    }
+    @include respond-to(m) {
+      padding: 20vh 5vh 10vh 5vh;
+      //height: auto;
+    }
+    .thank__header {
+      font-size: 56px;
+      line-height: 1.4;
+      margin-bottom: 1em;
+      font-family: $FontGothamProBold;
+      @include respond-to(dm) {
+        font-size: 36px;
+      }
+    }
+    .thank__text {
+      font-size: 17px;
+      line-height: 1.4;
+      margin-bottom: 3em;
+      width: 60%;
+      font-family: $FontGothamProMedium;
+      @include respond-to(dm) {
+        font-size: 14px;
+      }
+    }
+    .close_button {
+      top: 20%;
+      @include respond-to(t) {
+        right: 80px;
+        top: 22px;
+      }
+      @include respond-to(m) {
+        height: 40px;
+        width: 40px;
+        right: 28px;
+        top: 21px;
+      }
+    }
+  }
+}

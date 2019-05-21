@@ -1,0 +1,264 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../fonts/GothamPro.eot');
+    src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro.woff') format('woff'),
+    url('../fonts/GothamPro.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Gotham Pro Bold';
+    src: url('../fonts/GothamPro-Bold.eot');
+    src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Bold.woff') format('woff'),
+    url('../fonts/GothamPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham Pro Black';
+    src: url('../fonts/GothamPro-Black.eot');
+    src: url('../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Black.woff') format('woff'),
+    url('../fonts/GothamPro-Black.ttf') format('truetype');
+}
+
+body {
+    height: 100%;
+    font-family: 'Gotham Pro';
+}
+
+#content {
+    width: 560px;
+    margin-left: 32px;
+}
+
+.item {
+    vertical-align: middle;
+    height: 86px;
+    border-right: 3px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.item.show {
+    background: #f6fbf7;
+    border-right: 3px #c2e6c8 solid;
+}
+
+.item.show .arrow {
+    transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+}
+
+.item.active {
+    border-right: 3px #49b65d solid;
+}
+
+.number {
+    color: #212121;
+    letter-spacing: .05em;
+    font-size: 14px;
+    vertical-align: middle;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 0;
+}
+
+.title {
+    color: #212121;
+    letter-spacing: .05em;
+    font-size: 14px;
+    vertical-align: middle;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.more {
+    vertical-align: middle;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 0;
+    white-space: nowrap;
+}
+
+.link {
+    display: inline-block;
+    width: 24px;
+    height: 12px;
+    background: url("../img/view.svg") no-repeat;
+    background-size: cover;
+    margin-right: 14px;
+}
+
+.frame {
+    display: inline-block;
+    width: 23px;
+    height: 13px;
+    background: url("../img/browser.svg") no-repeat;
+    background-size: cover;
+    margin: 0 14px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    background: url("../img/arrow.svg") no-repeat;
+    background-size: cover;
+    margin: 0 14px;
+}
+
+.item-child {
+    vertical-align: middle;
+    height: 86px;
+    background: #f6fbf7;
+    display: none;
+    border-right: 3px #c2e6c8 solid;
+}
+
+.item-child.active {
+    background: #f6fbf7;
+    border-right: 3px #49b65d solid;
+}
+
+.dot {
+    vertical-align: middle;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: right;
+    width: 0;
+}
+
+.dot:before {
+    content: '';
+    display: inline-block;
+    background: #49b65d;
+    width: 5px;
+    height: 5px;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+
+.item-child .more {
+    text-align: right;
+
+}
+
+.item.first {
+    border-right: none;
+}
+
+.item.first .number {
+    font-size: 12px;
+    color: #d6d6d6;
+}
+
+.item.first .title {
+    font-size: 12px;
+    color: #d6d6d6;
+}
+
+.item.first .more {
+    font-size: 12px;
+    color: #d6d6d6;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-left: 57px;
+    font-family: 'Gotham Pro Black';
+    font-size: 18px;
+}
+
+header {
+    background: #100d16;
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+header img {
+    margin: auto;
+    display: block;
+}
+
+.window {
+    position: fixed;
+    left: 630px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-25%) scale(0.5);
+    border: 6px #d6d6d6 solid;
+    box-sizing: content-box;
+    transition: all .5s 1s;
+}
+
+iframe {
+    width: 1280px;
+    height: 600px;
+    background: #fff;
+
+    display: block;
+}
+
+.window:hover {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(1);
+
+}
+
+

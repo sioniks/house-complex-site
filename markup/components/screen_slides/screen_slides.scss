@@ -1,0 +1,539 @@
+//---------------------video__slide
+
+.first {
+  &_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include respond-to(t) {
+      width: 390px;
+      margin: 0 auto;
+    }
+    @include respond-to(m) {
+      width: 90%;
+      margin-top: 50px;
+    }
+
+  }
+  &_header {
+    font-size: 72px;
+
+    line-height: 1.1;
+    font-family: $FontGothamProBold;
+    margin-bottom: 60px;
+    @include respond-to(dm) {
+      font-size: 48px;
+      //line-height: 70px;
+    }
+    @include respond-to(m) {
+      text-align: center;
+      font-size: 36px;
+      //line-height: 44px;
+      margin-bottom: 26px;
+    }
+  }
+  &_subheader {
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: $FontGothamProMedium;
+    @include respond-to(dm) {
+      font-size: 20px;
+      //line-height: 30px;
+    }
+    @include respond-to(m) {
+      text-align: center;
+      font-size: 16px;
+      //line-height: 24px;
+      margin-bottom: 65px;
+    }
+  }
+  &__slide {
+    .img_block {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+}
+
+//------------------------------------------------------secondhome_slide
+.second_home {
+  @include fl-col;
+  height: 100%;
+  position: relative;
+  @include respond-to(t) {
+    width: 390px;
+    margin: 0 auto;
+    position: unset;
+  }
+  @include respond-to(m) {
+    width: 90%;
+  }
+  .screen_header {
+    margin-bottom: 75px;
+    @include respond-to(m) {
+      margin-bottom: 40px;
+    }
+  }
+  .screen_subheader {
+    width: 70%;
+    margin-bottom: 35px;
+    @include respond-to(t) {
+      width: 100%;
+    }
+    @include respond-to(m) {
+      margin-bottom: 40px;
+    }
+  }
+  .screen_text {
+    width: 70%;
+    @include respond-to(t) {
+      width: 100%;
+    }
+    @include respond-to(m) {
+      margin-bottom: 40px;
+    }
+  }
+  .bottom-min_block {
+    position: absolute;
+    bottom: 93px;
+    right: 0;
+    //width: 300px;
+    //height: 135px;
+    background: $cl_yellow;
+    font-family: $FontGothamProBold;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 19px;
+    line-height: 27px;
+    span {
+      padding: 0 50px;
+      @include respond-to(dm) {
+        padding: 0 30px;
+      }
+      @include respond-to(m) {
+        padding: 0 20px;
+        font-size: 12px;
+      }
+    }
+    @include respond-to(dm) {
+      //width: 220px;
+      //height: 100px;
+      padding-left: 35px;
+      font-size: 16px;
+      line-height: 24px;
+      bottom: 75px;
+    }
+    @include respond-to(t) {
+      right: 255px;
+      bottom: 0;
+    }
+    @include respond-to(m) {
+      width: 50%;
+      height: 70px;
+      right: 50%;
+      padding-left: 25px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  .bottom-min_block2 {
+    display: none;
+    @include respond-to(t) {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      width: 255px;
+      height: 75px;
+      background: url("%=static=%content/home-page/second-sm_img.jpg");
+      bottom: 0;
+      right: 0;
+    }
+    @include respond-to(m) {
+      width: 50%;
+      height: 70px;
+      right: 0%;
+    }
+  }
+}
+
+//----------------------------------------about__slide
+
+.about__slide {
+  .left_half {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15vw;
+    @include respond-to(dm) {
+      padding-right: 7vw;
+    }
+    @include respond-to(t) {
+      padding: 0 20vw;
+      height: 540px;
+    }
+    @include respond-to(m) {
+      padding: 0 20px;
+      height: 640px;
+    }
+  }
+  .right_half {
+    @include respond-to(t) {
+      height: 768px;
+      width: 100vw;
+    }
+  }
+}
+
+//------------------------------------------------------tehinfo__slide
+
+.scroll_slide.tehinfo__slide {
+  transition: all 0.5s ease;
+  overflow: hidden;
+  @include respond-to(t) {
+    flex-direction: column-reverse;
+  }
+  .left_half {
+    padding-top: 0;
+    width: 50vw;
+    //overflow: unset;
+    z-index: 1;
+    @include respond-to(t) {
+      width: 100vw;
+    }
+    @include respond-to(m) {
+      height: 186px;
+    }
+    &.full {
+      overflow: unset;
+      //transform: translateY(0%) translateX(100%);
+    }
+
+  }
+  .right_half {
+    height: calc(100% - 6em);
+    margin-top: 5.9em;
+    padding: 0% 150px;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
+    z-index: 2;
+
+    @include respond-to(dm) {
+      height: calc(100% - 5em);
+      margin-top: 4.9em;
+      padding-right: 4vw;
+      padding-left: 110px;
+    }
+    @include respond-to(t) {
+      height: 768px;
+      padding: 10vw 20vw;
+      margin: 0;
+      //overflow: hidden;
+    }
+    @include respond-to(m) {
+      height: 880px;
+      padding: 80px 20px;
+
+    }
+    .btn_y {
+      position: absolute;
+      bottom: 93px;
+      left: -305px;
+      @include respond-to(dm) {
+        left: -255px;
+        bottom: 60px;
+      }
+      @include respond-to(t) {
+        width: 60%;
+        left: 20%;
+        bottom: 35px;
+      }
+      @include respond-to(m) {
+        width: 88%;
+        left: 6%;
+        bottom: 18px;
+      }
+
+    }
+    &.full {
+      transform: translateY(0%) translateX(100%);
+      @include respond-to(t) {
+        transform: translateY(0%) translateX(0%);
+      }
+      //& .video_block .video__overslide {
+      //  transform: translateX(-200%);
+      //}
+    }
+  }
+  #videoPlay {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    transform: translateY(-50%);
+    transition: all .5s ease;
+    &:hover {
+      transform: scale(1.1) translateY(-47%);
+    }
+    @include respond-to(dm) {
+      width: 300px;
+      height: 300px;
+      left: -150px;
+    }
+    @include respond-to(t) {
+      right: auto;
+      left: 30%;
+      //top: 120%;
+      top: calc(100% + 220px);
+      transform: translatey(-50%);
+    }
+    @include respond-to(m) {
+      left: 33%;
+      top: calc(100% + 93px);
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+  .video_block {
+    position: absolute;
+    width: 200%;
+    left: 0%;
+    height: 100%;
+    //padding-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 5.9em;
+    @include respond-to(dm) {
+      padding-top: 4.9em;
+    }
+    @include respond-to(t) {
+      width: 100%;
+      left: 0;
+      padding-top: 0;
+    }
+    .video__overslide {
+      right: unset;
+      left: 0;
+    }
+    .big_img {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 50%;
+      @include respond-to(t) {
+        background-size: cover;
+      }
+    }
+    .video__close {
+      @include respond-to(dm) {
+        top: 8em;
+      }
+      @include respond-to(t) {
+        top: 4em;
+      }
+      @include respond-to(m) {
+        top: 0;
+        width: 2em;
+        height: 2em;
+      }
+    }
+  }
+
+}
+
+.teh_info-table {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 80%;
+  position: relative;
+  @include respond-to(t) {
+    width: 100%;
+  }
+
+  @include respond-to(m) {
+    width: 100%;
+    margin-top: 90px;
+  }
+
+  .teh_table-line {
+    //height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    .teh_name {
+      width: 40%;
+      font-family: $FontGothamProMedium;
+      line-height: 2;
+      font-size: 16px;
+      color: $cl_grey;
+      @include respond-to(dm) {
+        font-size: 14px;
+      }
+      @include respond-to(m) {
+        width: 50%;
+        line-height: 3;
+      }
+    }
+    .teh_data {
+      width: 40%;
+      text-align: right;
+      font-family: $FontGothamProBold;
+      line-height: 2;
+      font-size: 16px;
+      color: $cl_black;
+      text-transform: uppercase;
+      @include respond-to(dm) {
+        font-size: 14px;
+      }
+      @include respond-to(m) {
+        width: 50%;
+        line-height: 3;
+      }
+    }
+  }
+  &.tehT1 {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid rgba($cl_grey, 0.2);
+    @include respond-to(m) {
+      margin-bottom: 0;
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      //left: -10%;
+      top: -10px;
+      content: url("%=static=%content/elem/home.svg");
+      @include respond-to(m) {
+        top: -65px;
+      }
+    }
+  }
+  &.tehT2 {
+    &:before {
+      display: block;
+      position: absolute;
+      //left: -10%;
+      top: -10px;
+      content: url("%=static=%content/elem/cube.svg");
+      @include respond-to(m) {
+        top: -65px;
+      }
+    }
+  }
+}
+
+//=======================================================
+.conception_scroll, .comerce_scroll {
+  .first_header {
+    //  font-size: 72px;
+    //  @include respond-to(dm) {
+    //    font-size: 48px;
+    //  }
+    @include respond-to(m) {
+      //font-size: 36px;
+      margin-bottom: 30%;
+    }
+  }
+  .about__slide {
+    .right_half {
+      @include respond-to(m) {
+        height: 630px;
+      }
+
+    }
+  }
+}
+
+.home_scroll .first_content {
+  .first_header {
+    font-size: 90px;
+    @include respond-to(dm) {
+      font-size: 48px;
+    }
+    @include respond-to(m) {
+      font-size: 36px;
+    }
+  }
+}
+
+//=======================================================
+
+.map__slide {
+  .left_half {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10vw;
+    @include respond-to(t) {
+      height: 400px;
+      padding: 10% 20%;
+      z-index: 5;
+      overflow: visible;
+    }
+    @include respond-to(m) {
+      height: 230px;
+      padding: 15% 10% 10%;
+    }
+    .screen_header {
+      @include respond-to(t) {
+        margin-bottom: 0.5em;
+      }
+    }
+
+  }
+  .right_half {
+    @include respond-to(t) {
+      height: 768px;
+    }
+    @include respond-to(m) {
+      height: 440px;
+    }
+  }
+}
+
+.garant__slide {
+  .left_half {
+    @include respond-to(t) {
+      padding: 10vw 20vw;
+      margin: 0;
+      height: auto;
+    }
+    @include respond-to(m) {
+      padding: 50px 20px;
+      height: auto;
+    }
+  }
+  .right_half {
+    @include respond-to(t) {
+      height: 695px;
+    }
+    @include respond-to(m) {
+      height: auto;
+    }
+  }
+}
+
+.scroll_slide.quality__slide {
+  .right_half {
+    @include respond-to(m) {
+      height: 620px;
+      padding: 40px 20px;
+    }
+  }
+}

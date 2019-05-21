@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+{{> header/header}}
+<div class="container conception-container">
+  <div class="page__scroll conception_scroll">
+      <div class="scroll_slide video__slide active">
+          <div class="left_half">
+              <div class="first_content">
+                  <h1 class="first_header">Концепція <br>
+                      Millennium State</h1>
+              </div>
+          </div>
+          <div class="right_half">
+              <div class="img_block">
+                  <img src="%=static=%img/content/bg/conc_bg.jpg" alt="" class="big_img">
+
+              </div>
+          </div>
+      </div>
+      <div class="scroll_slide about__slide ">
+          <div class="left_half">
+              <h5 class="screen_header">Про житловий комплекс</h5>
+              <p class="screen_subheader">Ми створюємо захищений простір
+                  для життя. </p>
+              <p class="screen_subheader">Тут відчуваєш себе «вдома» не тільки в межах квартири, але і в затишному дворі, де все під рукою, де комфортно і безпечно, можна цікаво
+                  і насичено проводити дозвілля. </p>
+              <p class="screen_text">Розроблюючи концепцію ЖК, ми керувалися,
+                  в першу чергу, психологічними потребами для комфортного проживання людини та світовими тенденціями урбаністики. </p>
+          </div>
+          <div class="right_half">
+              <div class="img_block">
+                  <div class="info_line">
+                      <div class="line_elem">
+                          <h5 class="elem_head">4 / 10</h5>
+                          <p class="elem_text">Секції в процесі будівництва</p>
+                      </div>
+                      <div class="line_elem">
+                          <h5 class="elem_head">65%</h5>
+                          <p class="elem_text">Квартир ЖК продано</p>
+                      </div>
+                      <div class="line_elem">
+                          <h5 class="elem_head">IV кв. 2018</h5>
+                          <p class="elem_text">Уведення в експуатацію секцій А та Б</p>
+                      </div>
+                      <div class="line_elem">
+                          <h5 class="elem_head">400 дол/м<sup>2</sup></h5>
+                          <p class="elem_text">Планується ріст ціни до 650 дол/м<sup>2</sup></p>
+                      </div>
+                  </div>
+                  <img src="%=static=%img/content/bg/bg_2.jpg" alt="" class="big_img">
+
+              </div>
+          </div>
+      </div>
+      <div class="scroll_slide tehinfo__slide">
+          <div class="left_half">
+              {{> video-block/video-block}}
+          </div>
+          <div class="right_half">
+              <h5 class="screen_header">Технічні характеристики</h5>
+              <div class="teh_info-table">
+                  <div class="teh_table-line">
+                      <p class="teh_name">Клас:</p>
+                      <p class="teh_data">Комфорт</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">Секцій:</p>
+                      <p class="teh_data">10</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">ПОверхів:</p>
+                      <p class="teh_data">11</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">Квартир:</p>
+                      <p class="teh_data">800</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">Висота стелі:</p>
+                      <p class="teh_data">2.7 м <sup>2</sup></p>
+                  </div>
+              </div>
+              <div class="teh_info-table">
+                  <div class="teh_table-line">
+                      <p class="teh_name">Стіни:</p>
+                      <p class="teh_data">Цегла</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">Паркінг:</p>
+                      <p class="teh_data">Гостьовий</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">Опалення:</p>
+                      <p class="teh_data">Індивідуальне</p>
+                  </div>
+                  <div class="teh_table-line">
+                      <p class="teh_name">Утеплення:</p>
+                      <p class="teh_data">Пінополістилор</p>
+                  </div>
+                  {{> elements/button_y text='Обрати планування'}}
+              </div>
+
+          </div>
+      </div>
+      <div class="scroll_slide horizont__slide ">
+          <div class="left_half">
+              {{> horizon-slide/horizon_left}}
+          </div>
+          <div class="right_half">
+              {{> horizon-slide/horizon-slide}}
+          </div>
+      </div>
+      <div class="scroll_slide documentation__slide">
+          <div class="left_half">
+              {{> docs/docs-list}}
+          </div>
+          <div class="right_half">
+              {{> docs/docs-info}}
+          </div>
+      </div>
+      <div class="scroll_slide history__slide  ">
+          <div class="left_half">
+              <h5 class="screen_header">Інтерактивний хід будівництва</h5>
+
+              <div class="date-button">
+                  <div class="by_year">
+                      <button class="year_btn active" data-year="2018">2018 рік</button>
+                      <button class="year_btn" data-year="2018">2017 рік</button>
+                  </div>
+                  <div class="by_month">
+                      <button class="month_btm active" data-month="5">Травень 2018</button>
+                      <button class="month_btm" data-month="4">Квітень 2018</button>
+                      <button class="month_btm" data-month="3">Березень 2018</button>
+                      <button class="month_btm" data-month="2">Лютий 2018</button>
+                      <button class="month_btm" data-month="1">Січень 2018</button>
+                  </div>
+              </div>
+
+              <div class="super-nav">
+                  <a class="prev" >&#10094;</a>
+                  <a class="next" >&#10095;</a>
+              </div>
+          </div>
+          <div class="right_half">
+            {{> build_history/build_history}}
+
+          </div>
+      </div>
+      <div class="scroll_slide map__slide last_slide ">
+          <div class="left_half">
+              <h5 class="screen_header">Інфраструктура комплексу</h5>
+              <div class="maps_around">
+
+                  <div class="mpd maps-type-0 maps-all-js active" data-marker="0">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Всі обєкти:</p>
+                  </div>
+
+                  <div class="mpd maps-type-1 maps-type-js" data-marker="1">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Освіта:</p>
+                  </div>
+                  <div class="mpd maps-type-2 maps-type-js" data-marker="2">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Медицина:</p>
+                  </div>
+
+                  <div class="mpd maps-type-3 maps-type-js" data-marker="3">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Магазини:</p>
+                  </div>
+
+                  <div class="mpd maps-type-4 maps-type-js" data-marker="4">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Транспорт:</p>
+                  </div>
+
+                  <div class="mpd maps-type-5 maps-type-js" data-marker="5">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Розваги:</p>
+                  </div>
+
+                  <div class="mpd maps-type-6 maps-type-js" data-marker="6">
+                      <span class="map_icon"></span>
+                      <p class="icon_text">Спорт:</p>
+                  </div>
+
+
+              </div>
+          </div>
+          <div class="right_half">
+              {{> map/map}}
+          </div>
+      </div>
+  </div>
+
+</div>
+{{> popup/popup}}
+{{> footer/footer}}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQoQ-cFvvsdyaRHshQczCA6W0NnLvxpU8&amp;callback=initMaps">
+</script>
+</body>
+</html>

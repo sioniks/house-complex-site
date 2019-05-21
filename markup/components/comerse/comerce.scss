@@ -1,0 +1,145 @@
+.comerce-container {
+  .aboutcomerce__slide {
+    .left_half {
+      padding: 0;
+      @include respond-to(m) {
+        height: auto;
+      }
+      .img_block  {
+        @include respond-to(m) {
+          height: auto;
+        }
+      }
+      .big_img {
+        width: auto;
+        height: 100%;
+
+        @include respond-to(t) {
+          width: 100%;
+          height: auto;
+        }
+        @include respond-to(m) {
+          display: block;
+        }
+      }
+    }
+    .right_half {
+      padding-right: 10vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include respond-to(t) {
+        height: auto;
+        padding: 0 20vw;
+      }
+      @include respond-to(m) {
+        padding: 0 20px;
+      }
+    }
+    .comerce_content {
+      padding-left: 150px;
+      @include respond-to(dm) {
+        padding-left: 110px;
+      }
+      @include respond-to(t) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        padding-left: 0;
+      }
+      @include respond-to(m) {
+        padding-left: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+    .btn_y {
+      width: 370px;
+      position: relative;
+      display: block;
+      @include respond-to(m) {
+        width: 100%;
+      }
+      .btn_label {
+        white-space: nowrap;
+      }
+      .btn_label_hover {
+        white-space: nowrap;
+      }
+    }
+  }
+  .comercecontact__slide {
+    .left_half {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 5vw;
+      @include respond-to(t) {
+        padding-right: 0;
+      }
+
+    }
+    .right_half {
+      background: $cl_yellow;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 5vw;
+      @include respond-to(t) {
+        padding-left: 0;
+      }
+    }
+    .contact_table {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0;
+
+      @include respond-to(t) {
+        padding-left: 150px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+      @include respond-to(m) {
+        padding: 90px 20px 20px;
+        flex-direction: column;
+      }
+      .table_block {
+        width: 49%;
+        font-family: $FontGothamProBold;
+        font-size: 1.2em;
+        line-height: 2;
+        margin-bottom: 3em;
+        @include respond-to(dm) {
+          font-size: 1em;
+        }
+        @include respond-to(m) {
+          width: 100%;
+        }
+      }
+      .table_block-header {
+        text-transform: uppercase;
+        color: $cl_black-grey;
+      }
+      .table_block-text {
+        a {
+          color: $cl_black;
+          display: block;
+        }
+
+      }
+    }
+    .contact_block {
+
+      @include respond-to(t) {
+        padding-left: 150px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        padding-right: 100px;
+        height: auto;
+      }
+      @include respond-to(m) {
+        padding: 80px 20px;
+        height: auto;
+      }
+    }
+  }
+}

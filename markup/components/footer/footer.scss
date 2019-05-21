@@ -1,0 +1,227 @@
+.slideScreen .footer {
+
+  transform: translateY(80px);
+  position: absolute;
+  z-index: 100;
+  &.active {
+    transform: translateY(0);
+    //z-index: 100;
+  }
+  @include respond-to(t) {
+    transform: translateY(110px);
+    //z-index: auto;
+  }
+  @include respond-to(m) {
+    transform: translateY(0px);
+    position: relative;
+  }
+}
+
+.footer {
+  height: 75px;
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  transition: all .8s ease;
+  transform: translateY(0);
+  z-index: 25;
+  background-color: $cl_black;
+  @include respond-to(t) {
+    position: relative;
+  }
+
+
+  &.rel {
+    position: relative;
+  }
+  @include respond-to(dm) {
+    height: 60px;
+  }
+  @include respond-to(t) {
+    height: 110px;
+  }
+  @include respond-to(m) {
+    //display: none;
+    height: 436px;
+    flex-direction: column;
+  }
+  .logo-part {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    background-color: $cl_black;
+    @include respond-to(dm) {
+      width: 15%;
+    }
+    @include respond-to(m) {
+      width: 100%;
+      height: 30%;
+    }
+    .logo {
+      @include bg-svg($logo);
+      display: block;
+      @include position(centerY);
+      right: 25%;
+      @include respond-to(dm) {
+        transform: scale(0.7) translateY(-50%);
+        top: 42%;
+        right: 0;
+      }
+      @include respond-to(t) {
+        transform: scale(1) translateY(-50%);
+        top: 50%;
+      }
+      @include respond-to(m) {
+        @include position(center);
+        top: 80%;
+      }
+    }
+  }
+  .info-part {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    background-color: $cl_black;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: $cl_white;
+    padding-left: 20px;
+    @include respond-to(dm) {
+
+      font-size: 15px;
+    }
+    @include respond-to(t) {
+      justify-content: space-between;
+      padding-left: 0px;
+    }
+    @include respond-to(m) {
+      font-size: 13px;
+      text-align: center;
+      width: 100%;
+      height: 70%;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    .info_text {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      opacity: 0.3;
+
+      @include respond-to(t) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+        width: 75%;
+      }
+      @include respond-to(m) {
+        align-items: center;
+        width: 100%;
+      }
+      .copy {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include respond-to(t) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          line-height: 30px;
+          padding-left: 35px;
+        }
+        @include respond-to(m) {
+          align-items: center;
+          padding-left: 0;
+        }
+        .copiright {
+          margin-right: 90px;
+          @include respond-to(dm) {
+            margin-right: 50px;
+          }
+          @include respond-to(t) {
+            margin-right: 0;
+          }
+        }
+        .confident {
+
+        }
+      }
+    }
+    .info_link {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      @include respond-to(dm) {
+        width: 35%;
+      }
+      @include respond-to(t) {
+        width: 25%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 35px;
+      }
+      @include respond-to(m) {
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-right: 0;
+      }
+      .social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 100px;
+        width: 40%;
+        @include respond-to(dm) {
+          padding-right: 70px;
+        }
+        @include respond-to(t) {
+          justify-content: flex-end;
+          padding-right: 0;
+          margin-bottom: 20px;
+        }
+        @include respond-to(m) {
+          justify-content: center;
+          margin-bottom: 70px;
+        }
+        &-elem {
+          font-size: 21px;
+          font-family: $FontGothamProBold;
+          @include hover {
+            color: $cl_yellow;
+            transition: all 0.5s ease;
+            opacity: 1;
+          }
+          @include respond-to(dm) {
+            font-size: 18px;
+          }
+          @include respond-to(t) {
+            margin-left: 20px;
+          }
+          @include respond-to(m) {
+            margin-right: 20px;
+          }
+        }
+      }
+      .by_facility {
+        width: 60%;
+        @include bg-svg($by_facility);
+        @include position(centerY);
+        left: 40%;
+        @include respond-to(t) {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,404 @@
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  @include respond-to(t) {
+    position: relative;
+  }
+  &_wrap  {
+    width: 100%;
+    padding-left: 10vw;
+    float: right;
+    position: relative;
+  }
+  &_logo  {
+    position: absolute;
+    left: 9.9%;
+    top: 0;
+    width: 12em;
+    height: 9em;
+    background: $cl_white url('../img/general/logo-head.svg') center no-repeat;
+    background-size: 70%;
+    @include respond-to(dm) {
+      width: 10em;
+      height: 8em;
+      left: 5%;
+    }
+    @include respond-to(t) {
+      width: 9em;
+      height: 6em;
+      top: 12px;
+    }
+    @include respond-to(m) {
+      width: 8em;
+      height: 5em;
+    }
+  }
+
+  &_menu {
+    width: 100%;
+    height: 6em;
+    background-color: $cl_black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 5vw;
+    padding-left: 20vw;
+    @include respond-to(dm) {
+      height: 5em;
+      padding-left: 15vw;
+    }
+    @include respond-to(t) {
+      display: none;
+    }
+    //&.active {
+    //  transform: translateX(0%);
+    //  //position: fixed;
+    //  .menu_subitem-mob {
+    //    transform: translateX(0%);
+    //  }
+    //}
+    .menu_item {
+      //margin: 0 20px;
+
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 6px 0px 0px transparent inset;
+      &:before {
+        content: '';
+        width: 0;
+        height: 6px;
+        background: $cl_yellow;
+        @include position(centerX);
+        top: 0;
+        transition: all 0.5s ease;
+      }
+      //@include respond-to(dm) {
+      //  margin: 0 30px;
+      //  padding: 29px;
+      //}
+      @include respond-to(t) {
+        height: 120px;
+      }
+      @include respond-to(m) {
+        height: 90px;
+      }
+      &.current {
+        box-shadow: 0px 6px 0px 0px $cl_yellow inset;
+        .menu_item-link {
+          color: $cl_yellow;
+        }
+        @include hover {
+          &:before {
+            width: 0%;
+          }
+        }
+      }
+      @include hover {
+        &:before {
+          width: 100%;
+        }
+        & .menu_subitem {
+          top: 6em;
+          opacity: 1;
+          margin-top: .3em;
+          @include respond-to(dm) {
+            top: 5em;
+          }
+
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
+
+      }
+      &-link {
+        padding: 2.25em 2.15em;
+        text-transform: uppercase; 
+        font-family: $FontGothamProBold;
+        font-size: 17px;
+        transition: all 0.5s ease;
+        white-space: nowrap;
+        @include respond-to(dm) {
+          font-size: 15px;
+        }
+        @include hover {
+          color: $cl_yellow;
+        }
+
+      }
+
+    }
+
+    &-button {
+      display: none;
+      @include respond-to(t) {
+        display: block;
+        width: 57px;
+        height: 57px;
+        position: fixed;
+        background-color: $cl_black;
+        right: 50px;
+        top: 22px;
+        z-index: 2222;
+      }
+      @include respond-to(m) {
+        width: 42px;
+        height: 42px;
+        right: 20px;
+        top: 28px;
+      }
+      .line {
+        width: 26px;
+        height: 2px;
+        background-color: $cl_white;
+        display: block;
+        position: absolute;
+        left: 28%;
+        transition: all .5s ease;
+        @include respond-to(m) {
+          width: 19px;
+        }
+        &-one {
+          top: 20px;
+          @include respond-to(m) {
+            top: 15px;
+          }
+        }
+        &-two {
+          top: 36px;
+          @include respond-to(m) {
+            top: 26px;
+          }
+        }
+      }
+      &.active {
+        background-color: $cl_white;
+        .line-one {
+          top: 26px;
+          transform: rotate(135deg);
+          background-color: $cl_black;
+          @include respond-to(m) {
+            top: 20px;
+          }
+        }
+        .line-two {
+          top: 26px;
+          transform: rotate(-135deg);
+          background-color: $cl_black;
+          @include respond-to(m) {
+            top: 20px;
+          }
+        }
+      }
+
+    }
+    .menu_subitem {
+      position: absolute;
+      left: 0;
+      top: -100px;
+      min-width: 15em;
+      opacity: 0;
+      background: $cl_white;
+      padding: 10px 0px 10px 30px;
+      text-align: left;
+      z-index: -1;
+      transition: all 1s ease;
+      box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.41);
+
+
+      @include respond-to(t) {
+        display: none;
+      }
+      .menu_subitem-link {
+        font-size: 17px;
+        line-height: 47px;
+        height: 47px;
+        font-family: $FontGothamProBold;
+        position: relative;
+        text-transform: uppercase;
+        padding-right: 3em;
+        color: $cl_black;
+        display: block;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        @include respond-to(dm) {
+          font-size: 15px;
+        }
+        &:after {
+          display: block;
+          content: url('../img/content/elem/menu_arr-g.svg');
+          position: absolute;
+          right: 15px;
+          top: 0px;
+        }
+        @include hover {
+          color: $cl_yellow;
+          &:after {
+            content: url('../img/content/elem/menu_arr-y.svg');
+          }
+        }
+        &.phone_menu-link {
+          &:after {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+  .menu_subitem-mob,
+  .menu_subitem-mob2 {
+    display: none;
+    @include respond-to(t) {
+      display: flex;
+      transition: all .7s ease;
+      transform: translateX(-120%);
+      height: 100vh;
+      width: 100vw;
+      //position: absolute;
+      position: fixed;
+      flex-direction: column;
+      padding-right: 0;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      top: 0;
+      background: $cl_black;
+    }
+
+    //&.active {
+    //  transform: translateX(0%);
+    //  //position: fixed;
+    //}
+    .menu_subitem-link {
+      font-size: 17px;
+      line-height: 47px;
+      height: 47px;
+      margin-bottom: 100px;
+      text-transform: uppercase;
+      font-family: $FontGothamProBold;
+      @include respond-to(t) {
+        margin-bottom: 50px;
+        font-size: 14px;
+      }
+
+    }
+    .link_label {
+      color: $cl_white;
+    }
+    //.back_link {
+    //  position: absolute;
+    //  left: 5%;
+    //  top: 5%;
+    //  padding-left: 20px;
+    //  font-size: 11px;
+    //  line-height: 25px;
+    //  text-transform: uppercase;
+    //  font-family: $FontGothamProBold;
+    //  color: $cl_grey;
+    //  &:before {
+    //    content: '❮';
+    //    display: block;
+    //    position: absolute;
+    //    font-size: 14px;
+    //    line-height: 25px;
+    //    left: 0;
+    //    color: $cl_grey;
+    //  }
+    //}
+  }
+}
+
+.header_menu__mobile {
+  display: none;
+  @include respond-to(t) {
+    display: flex;
+    transition: all .7s ease;
+    transform: translateX(-120%);
+    background-color: $cl_black;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    flex-direction: column;
+    padding-right: 0;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    &.active {
+      transform: translateX(0%);
+    }
+    .menu_item {
+      height: 90px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0px 6px 0px 0px transparent inset;
+      @include respond-to(m) {
+        height: 50px;
+      }
+      &.current {
+        box-shadow: 0px 6px 0px 0px $cl_yellow inset;
+        .menu_item-link {
+          color: $cl_yellow;
+        }
+      }
+
+      &-link {
+        width: 100%;
+        height: 100%;
+        text-transform: uppercase;
+        font-family: $FontGothamProBold;
+        font-size: 15px;
+        transition: all 0.5s ease;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  75% {
+    opacity: 0;
+    top: 130px;
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 2;
+    top: 110px;
+
+  }
+}
+
+@keyframes menuDm {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  75% {
+    opacity: 0;
+    top: 110px;
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 2;
+    top: 80px;
+
+  }
+}

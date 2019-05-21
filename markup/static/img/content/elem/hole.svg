@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="80px" viewBox="0 0 52 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>keyhole@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Splash" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MS-Splash-(1920)-stage-1" transform="translate(-934.000000, -500.000000)" fill="#FFFFFF">
+            <path d="M949.319149,548.939351 C940.301763,544.999488 934,536.001629 934,525.531915 C934,511.431028 945.431028,500 959.531915,500 C973.632802,500 985.06383,511.431028 985.06383,525.531915 C985.06383,536.001629 978.762067,544.999488 969.744681,548.939351 L969.744681,580 L949.319149,580 L949.319149,548.939351 Z" id="keyhole"></path>
+        </g>
+    </g>
+</svg>

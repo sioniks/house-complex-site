@@ -1,0 +1,28 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+.bg-dot {
+  background-image: url('data:image/svg+xml,<svg  width="11px" height="11px" viewBox="0 0 11 11"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" ><circle cx="3.5" cy="3.5" r="3.5" style="fill:rgb(238, 238, 238)"></circle></svg>');
+  background-repeat: repeat;
+  background-position: bottom right;
+  @include respond-to(dm) {
+    background-image: url('data:image/svg+xml,<svg  width="9px" height="9px" viewBox="0 0 11 11"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" ><circle cx="3.5" cy="3.5" r="3.5" style="fill:rgb(238, 238, 238)"></circle></svg>');
+
+  }
+  @include respond-to(t) {
+    background-image: url('data:image/svg+xml,<svg  width="9px" height="9px" viewBox="0 0 11 11"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" ><circle cx="3.5" cy="3.5" r="3.5" style="fill:rgb(238, 238, 238)"></circle></svg>');
+  }
+  @include respond-to(m) {
+    background-image: url('data:image/svg+xml,<svg  width="7px" height="7px" viewBox="0 0 11 11"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" ><circle cx="3.5" cy="3.5" r="3.5" style="fill:rgb(238, 238, 238)"></circle></svg>');
+  }
+}
+
+
+$cl_black: #2A2C30;
+$cl_white: #fff;
+$cl_yellow: #FCC334;
+$cl_grey: #AAACB0;
+$cl_light-grey: #F3F3F5;
+$cl_black-grey: #5E6066;
+
+

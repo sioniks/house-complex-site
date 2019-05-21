@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="592px" height="592px" viewBox="0 0 592 592" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="404" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MS-404-(1920)" transform="translate(-328.000000, -282.000000)">
+            <g id="Group-3" transform="translate(328.000000, 282.000000)">
+                <circle id="Oval-2" fill="#D8D8D8" opacity="0.200000003" cx="296" cy="296" r="296"></circle>
+                <g id="404" transform="translate(210.000000, 118.000000)">
+                    <rect id="Rectangle-path" stroke="#CCCCCC" stroke-width="3.892" fill="#D8D8D8" opacity="0.459999979" x="0" y="0" width="177.900901" height="364"></rect>
+                    <g id="Group" transform="translate(157.405405, 191.018018)">
+                        <path d="M9.28508054,26.9265821 L9.28508054,11.1695452 C9.28508054,5.18586025 14.2019292,0.398912327 20.1021476,0.398912327 C26.002366,0.398912327 30.9192147,5.18586025 30.9192147,11.1695452 L30.9192147,26.9265821 L9.28508054,26.9265821 Z" id="Shape" stroke="#2A2C30" stroke-width="3.892"></path>
+                        <rect id="Rectangle-path" fill="#F9C314" fill-rule="nonzero" x="0.434752935" y="17.5521424" width="39.9248112" height="29.1205999"></rect>
+                        <rect id="Rectangle-path" fill="#F9C314" fill-rule="nonzero" x="0.434752935" y="39.8912327" width="40.1214851" height="6.78150956"></rect>
+                    </g>
+                    <g id="Group" transform="translate(27.054054, 27.054054)" fill="#F9C314" fill-rule="nonzero">
+                        <path d="M54.7956989,55.0884279 L0.195698925,55.0884279 C0.195698925,24.6811953 24.6580645,0 54.7956989,0 L54.7956989,55.0884279 Z" id="Shape"></path>
+                        <path d="M120.941935,55.0884279 L66.5376344,55.0884279 L66.5376344,0 C96.6752688,0 120.941935,24.6811953 120.941935,55.0884279 Z" id="Shape"></path>
+                        <rect id="Rectangle-path" x="0.195698925" y="66.1456033" width="54.4043011" height="73.8461363"></rect>
+                        <rect id="Rectangle-path" x="66.5376344" y="66.1456033" width="54.4043011" height="73.8461363"></rect>
+                    </g>
+                    <path d="M177.900901,222.171171 L177.900901,225.45045" id="Shape" stroke="#2A2C30" stroke-width="3.892" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

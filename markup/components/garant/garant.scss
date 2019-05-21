@@ -1,0 +1,132 @@
+.garant__slide {
+  .left_half {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 8vw;
+  }
+  .garant_info {
+    .screen_header {
+      margin-bottom: 80px;
+      @include respond-to(dm) {
+        margin-bottom: 29px;
+      }
+    }
+    .screen_subheader {
+      margin-bottom: 40px;
+      @include respond-to(dm) {
+        margin-bottom: 29px;
+      }
+    }
+    .screen_text {
+      margin-bottom: 40px;
+      padding-right: 20%;
+      @include respond-to(dm) {
+        margin-bottom: 29px;
+      }
+      @include respond-to(m) {
+        padding-right: 0;
+      }
+    }
+    .screen_link {
+      text-transform: lowercase;
+      .link_label {
+        color: $cl_yellow;
+      }
+      .link_label_hover {
+        color: $cl_black;
+      }
+    }
+  }
+  .imgblock_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    @include respond-to(m) {
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+  }
+  .imgblock {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include respond-to(m) {
+      width: 90%;
+      padding-bottom: 90%;
+      margin: 5%;
+      pointer-events: none;
+    }
+
+    &:nth-child(1) {
+      background-image: url('%=static=%/content/bg/gar1.jpg');
+    }
+    &:nth-child(2) {
+      background-image: url('%=static=%/content/bg/gar2.jpg');
+
+    }
+    &:nth-child(3) {
+      background-image: url('%=static=%/content/bg/gar2.jpg');
+
+    }
+    &:nth-child(4) {
+      background-image: url('%=static=%/content/bg/gar1.jpg');
+
+    }
+    &-logo {
+      height: auto;
+      width: 40%;
+    }
+    &-info {
+      height: 35%;
+      margin-top: 5%;
+      padding: 0 10%;
+      font-family: $FontGothamProBold;
+      color: $cl_white;
+    }
+    &-yellow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 20%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $cl_yellow;
+      font-family: $FontGothamProBold;
+      color: $cl_black;
+    }
+    @include hover {
+      .hover-effect {
+        transform: translateX(0%);
+      }
+    }
+  }
+  .hover-effect {
+    position: absolute;
+    padding-bottom: 23%;
+    transition: all 0.7s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($cl_black, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateX(-100%);
+    @include respond-to(m) {
+      transform: translateX(0%);
+    }
+  }
+}
+

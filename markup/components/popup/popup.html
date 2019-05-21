@@ -1,0 +1,43 @@
+<div class="popup_wrapper ">
+    <div class="popup_mask"></div>
+    <div class="popup_block">
+        <div class="wrap1">
+            <h5 class="form_name">Дізнатися <br>деталі</h5>
+            <div class="close_button">
+                <span class="top-l"></span>
+                <span class="bot-l"></span>
+            </div>
+        </div>
+
+        <form id="popup_form" class="popup_form">
+            <div class="wrap2">
+                <div class="form_group required">
+                    <input type="text" name="name" class="form_fild form__name " placeholder="Ваше ім'я">
+                    <span>Введіть ваше ім'я</span>
+                </div>
+                <div class="form_group required">
+                    <input type="tel" name="tel" class="form_fild form__tel " placeholder="Номер телефону">
+                    <span>Введіть номер телефону</span>
+                </div>
+            </div>
+            <div class="form_group form_group__text">
+                <textarea name="comment" class="form_fild form__text" placeholder="Коментар ..."  cols="30" rows="10"></textarea>
+            </div>
+
+            <input type="text" name="type" hidden id="form__type">
+            <input type="text" name="desc" hidden id="appart_info">
+
+            <button type="submit" class="btn_y reverse_btn form_button" id="">
+                <span class="btn_label" >Відправити</span>
+                <span class="btn_label_hover">Відправити</span>
+            </button>
+        </form>
+    </div>
+    <div class="thank_block">
+        <h4 class="thank__header">Дякуємо!</h4>
+        <p class="thank__text">
+            У найближчий час з Вами зв’яжеться
+            працівник відділу продажів житлогового комплексу Millennium State.
+        </p>
+    </div>
+</div>

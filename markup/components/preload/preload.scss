@@ -1,0 +1,223 @@
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  background-color: #2A2C30;
+  transition: all 1.5s ease;
+  overflow: hidden;
+  &.active {
+    opacity: 1;
+  }
+  &.hide {
+    transform: translateX(-200%);
+  }
+
+  &-logo {
+    @include position(centerX);
+    top: 0;
+    @include respond-to(dm) {
+      height: 120px;
+      width: 140px;
+    }
+    @include respond-to(m) {
+      height: 90px;
+      width: 110px;
+    }
+  }
+  &-shild {
+    @include position(center);
+    @include respond-to(dm) {
+      height: 160px;
+      width: 140px;
+    }
+    @include respond-to(m) {
+      top: 45%;
+    }
+  }
+  &-hole {
+    @include position(center);
+    top: 48%;
+    transition: all 3s ease;
+    @include respond-to(dm) {
+      height: 51px;
+      width: 32px;
+    }
+    @include respond-to(m) {
+      top: 45%;
+    }
+    &.big {
+      transform: scale(100) translateY(20%);
+      top: 0;
+    }
+  }
+  &-blick {
+    width: 70vw;
+    position: absolute;
+    left: 45%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all 4s ease;
+    @include respond-to(m) {
+      width: 200vw;
+      left: 35%;
+      top: 47%;
+    }
+    &.fade {
+      opacity: 0;
+    }
+  }
+  &-key {
+    position: absolute;
+    left: 35%;
+    bottom: 18%;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    transform: rotate(-45deg);
+    transition: all 1s ease;
+    &:hover {
+      height: 110px;
+    }
+    @include respond-to(dm) {
+      height: 90px;
+      width: 90px;
+      left: 32%;
+      &:hover {
+        height: 95px;
+      }
+    }
+    @include respond-to(t) {
+      left: 20%;
+    }
+    @include respond-to(m) {
+      left: 38%;
+      bottom: 9%;
+    }
+    &.dramm {
+      animation: key-dramm 2s ease-in-out alternate infinite;
+    }
+
+    &.active {
+      animation: key-anim 3s ease 1 forwards;
+      @include respond-to(t) {
+        animation: key-anim-tabl 3s ease 1 forwards;
+      }
+      @include respond-to(m) {
+        animation: key-anim-mob 3s ease 1 forwards;
+      }
+    }
+
+  }
+  &-text {
+    color: $cl_white;
+    opacity: 0.3;
+    font-family: $FontGothamProMedium;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+    transition: all 1s ease;
+    @include position(centerX);
+    bottom: 20%;
+    animation: text-light 2s ease-in-out alternate infinite;
+    &.fade {
+      animation: none;
+      opacity: 0;
+      display: none;
+    }
+    @include respond-to(dm) {
+      font-size: 14px;
+    }
+    @include respond-to(m) {
+      width: 85%;
+      bottom: 25%;
+    }
+
+  }
+}
+
+@keyframes key-anim {
+  0% {
+    left: 35%;
+    bottom: 18%;
+    transform: rotate(-45deg);
+    height: 90px;
+  }
+  50% {
+    left: 50%;
+    bottom: 43%;
+    transform: rotate(0deg) translateX(-50%);
+    height: 200px;
+  }
+  100% {
+    left: 50%;
+    bottom: 48%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    height: 1px;
+  }
+}
+
+@keyframes key-anim-tabl {
+  0% {
+    left: 20%;
+    bottom: 18%;
+    transform: rotate(-45deg);
+    height: 70px;
+  }
+  50% {
+    left: 50%;
+    bottom: 43%;
+    transform: rotate(0deg) translateX(-50%);
+    height: 170px;
+  }
+  100% {
+    left: 50%;
+    bottom: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    height: 1px;
+  }
+}
+
+@keyframes key-anim-mob {
+  0% {
+    left: 38%;
+    bottom: 9%;
+    transform: rotate(-45deg);
+    height: 70px;
+  }
+  50% {
+    left: 50%;
+    bottom: 43%;
+    transform: rotate(0deg) translateX(-50%);
+    height: 130px;
+  }
+  100% {
+    left: 50%;
+    bottom: 54%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    height: 1px;
+  }
+}
+
+@keyframes key-dramm {
+  from {
+    transform: rotate(-49deg);
+  }
+  to {
+    transform: rotate(-35deg);
+  }
+}
+
+@keyframes text-light {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
